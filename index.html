@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G Studio Daily News â 2026.05.19</title>
+<title>G Studio Daily News — 2026.05.19</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-  /* ââ Reset ââ */
+  /* ── Reset ── */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* ââ Design Tokens (Apple Design System) ââ */
+  /* ── Design Tokens (Apple Design System) ── */
   :root {
     /* Brand & Accent */
     --color-primary: #0066cc;
@@ -58,7 +58,7 @@
     --rounded-pill: 9999px;
   }
 
-  /* ââ Base ââ */
+  /* ── Base ── */
   html {
     font-family: var(--font-body);
     font-size: 17px;
@@ -75,7 +75,7 @@
 
   a { color: inherit; text-decoration: none; }
 
-  /* ââ Global Nav ââ */
+  /* ── Global Nav ── */
   .global-nav {
     position: sticky;
     top: 0;
@@ -112,7 +112,7 @@
     color: var(--color-body-muted);
   }
 
-  /* ââ Sub Nav (Frosted) ââ */
+  /* ── Sub Nav (Frosted) ── */
   .sub-nav {
     position: sticky;
     top: 44px;
@@ -148,7 +148,7 @@
     letter-spacing: -0.224px;
   }
 
-  /* ââ Hero Tile (Dark) ââ */
+  /* ── Hero Tile (Dark) ── */
   .hero-tile {
     background: var(--color-surface-tile-1);
     padding: var(--spacing-section) var(--spacing-lg);
@@ -205,7 +205,7 @@
     font-weight: 600;
   }
 
-  /* ââ Section Header ââ */
+  /* ── Section Header ── */
   .section-header {
     max-width: 980px;
     margin: 0 auto;
@@ -226,7 +226,7 @@
     margin-top: 4px;
   }
 
-  /* ââ Card Grid ââ */
+  /* ── Card Grid ── */
   .card-grid {
     max-width: 980px;
     margin: 0 auto;
@@ -236,7 +236,7 @@
     gap: 20px;
   }
 
-  /* ââ News Card (Store Utility Card style) ââ */
+  /* ── News Card (Store Utility Card style) ── */
   .news-card {
     background: var(--color-canvas);
     border: 1px solid var(--color-hairline);
@@ -345,7 +345,7 @@
     transform: translateX(3px);
   }
 
-  /* ââ Featured Card (Spans full width, dark) ââ */
+  /* ── Featured Card (Spans full width, dark) ── */
   .news-card--featured {
     grid-column: 1 / -1;
     background: var(--color-surface-tile-2);
@@ -399,7 +399,7 @@
     border-color: rgba(255,255,255,0.1);
   }
 
-  /* ââ Footer ââ */
+  /* ── Footer ── */
   .page-footer {
     background: var(--color-canvas-parchment);
     padding: 64px var(--spacing-lg);
@@ -443,7 +443,7 @@
     line-height: 1.5;
   }
 
-  /* ââ Responsive ââ */
+  /* ── Responsive ── */
   @media (max-width: 833px) {
     .hero-tile__headline { font-size: 40px; }
     .hero-tile__tagline { font-size: 21px; }
@@ -487,7 +487,7 @@
 <div class="sub-nav">
   <div class="sub-nav__inner">
     <span class="sub-nav__title">Viva Engage</span>
-    <span class="sub-nav__meta">ììì ìë¶ë¬¸ ì»¤ë®¤ëí°</span>
+    <span class="sub-nav__meta">영상제작부문 커뮤니티</span>
   </div>
 </div>
 
@@ -496,23 +496,23 @@
   <div class="hero-tile__inner">
     <div class="hero-tile__eyebrow">Daily News</div>
     <h1 class="hero-tile__headline">G Studio</h1>
-    <p class="hero-tile__tagline">ììì ìë¶ë¬¸ ì¤ëì ìì</p>
+    <p class="hero-tile__tagline">영상제작부문 오늘의 소식</p>
     <div class="hero-tile__date-badge">
-      <strong>2026.05.19</strong> ììì¼ &middot; ìµê·¼ 7ì¼ê° ê²ìë¬¼ 6ê±´
+      <strong>2026.05.19</strong> 월요일 &middot; 최근 7일간 게시물 6건
     </div>
   </div>
 </section>
 
 <!-- Section Header -->
 <div class="section-header">
-  <h2 class="section-header__title">ì´ë² ì£¼ ìì</h2>
-  <p class="section-header__count">5ì 12ì¼ â 5ì 19ì¼ &middot; 6ê±´ì ì ê²ìë¬¼</p>
+  <h2 class="section-header__title">이번 주 소식</h2>
+  <p class="section-header__count">5월 12일 — 5월 19일 &middot; 6건의 새 게시물</p>
 </div>
 
 <!-- Card Grid -->
 <div class="card-grid">
 
-  <!-- Featured Card: ë¯¸ëì´ìë² ì ê² (Most recent) -->
+  <!-- Featured Card: 미디어서버 점검 (Most recent) -->
   <a class="news-card news-card--featured" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1NjcwNDcwMzc2NjUyOCJ9" target="_blank" rel="noopener">
     <div class="news-card__icon">
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
@@ -523,90 +523,90 @@
     </div>
     <div class="news-card__content">
       <span class="news-card__tag news-card__tag--infra">Infra</span>
-      <h3 class="news-card__title">5ì ë¯¸ëì´ìë² ì ê² ê²°ê³¼</h3>
-      <p class="news-card__desc">K2/TAKER ìë² ì ì ì ê² ìë£. ë¯¸ì¬ì© VR íì¼ ì ë¦¬ë¡ ì¤í ë¦¬ì§ë¥¼ íë³´íìµëë¤.</p>
+      <h3 class="news-card__title">5월 미디어서버 점검 결과</h3>
+      <p class="news-card__desc">K2/TAKER 서버 전수 점검 완료. 미사용 VR 파일 정리로 스토리지를 확보했습니다.</p>
       <div class="news-card__footer">
-        <span class="news-card__author">ì ìë¯¼ / ììì ì2í</span>
+        <span class="news-card__author">신상민 / 영상제작2팀</span>
         <span class="news-card__date">5.16</span>
       </div>
       <span class="news-card__cta">
-        ìë¬¸ ë³´ê¸°
+        원문 보기
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </span>
     </div>
   </a>
 
-  <!-- Card: ì£¼ê° ë¦¬ë·° -->
+  <!-- Card: 주간 리뷰 -->
   <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MzU4NDgwMzYzNTIwMCJ9" target="_blank" rel="noopener">
     <span class="news-card__tag news-card__tag--review">Review</span>
-    <h3 class="news-card__title">Gì¤íëì¤ ì£¼ê° ë¦¬ë·°<br>5ì 2ì£¼ì°¨</h3>
-    <p class="news-card__desc">í¬ë¡ íì¥íë¡ê·¸ë¨ ë°°í¬, AI í¨ìì¼ ì ì, 5ì ì¤íë AR ì ì© ë± ì£¼ì ì±ê³¼ë¥¼ ì ë¦¬íìµëë¤.</p>
+    <h3 class="news-card__title">G스튜디오 주간 리뷰<br>5월 2주차</h3>
+    <p class="news-card__desc">크로 확장프로그램 배포, AI 패션쇼 제작, 5월 오프닝 AR 적용 등 주요 성과를 정리했습니다.</p>
     <div class="news-card__footer">
-      <span class="news-card__author">ê¹ì¸ì / ììì ì1í</span>
+      <span class="news-card__author">김세영 / 영상제작1팀</span>
       <span class="news-card__date">5.14</span>
     </div>
     <span class="news-card__cta">
-      ìë¬¸ ë³´ê¸°
+      원문 보기
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
   </a>
 
-  <!-- Card: ARìë°©ì¡ -->
+  <!-- Card: AR생방송 -->
   <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MzQ5NzM5ODIzOTIzMiJ9" target="_blank" rel="noopener">
     <span class="news-card__tag news-card__tag--oss">OSS</span>
-    <h3 class="news-card__title">ARìë°©ì¡ ì ì©<br>ë°ëíë ë 5/17</h3>
-    <p class="news-card__desc">AR/LED WALL/ì¡°ëª/OSS ì¤í­ íµí© ë°°ì . ìë°©ì¡ íì¥ ê¸°ì  íì ì²´ê³ë¥¼ ê°ëíìµëë¤.</p>
+    <h3 class="news-card__title">AR생방송 적용<br>바디프렌드 5/17</h3>
+    <p class="news-card__desc">AR/LED WALL/조명/OSS 스탭 통합 배정. 생방송 현장 기술 협업 체계를 가동했습니다.</p>
     <div class="news-card__footer">
-      <span class="news-card__author">ì´ì¸í / ììì ì1í</span>
+      <span class="news-card__author">이세훈 / 영상제작1팀</span>
       <span class="news-card__date">5.14</span>
     </div>
     <span class="news-card__cta">
-      ìë¬¸ ë³´ê¸°
+      원문 보기
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
   </a>
 
-  <!-- Card: LED WALL ì ê² -->
+  <!-- Card: LED WALL 점검 -->
   <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MzIyMTI4MjIyNjE3NiJ9" target="_blank" rel="noopener">
     <span class="news-card__tag news-card__tag--infra">Infra</span>
-    <h3 class="news-card__title">5ì LED WALL<br>ì ê² ê²°ê³¼</h3>
-    <p class="news-card__desc">LED ëª¨ë, ì§ê·¸, NC2IO ì ì ì ê²ì ìë£íìµëë¤. ì  í­ëª© ì ììëë¤.</p>
+    <h3 class="news-card__title">5월 LED WALL<br>점검 결과</h3>
+    <p class="news-card__desc">LED 모듈, 지귰, NC2IO 전수 점검을 완룈했습니다. 전 항목 정상입니다.</p>
     <div class="news-card__footer">
-      <span class="news-card__author">ìì¤êµ / ììì ì2í</span>
+      <span class="news-card__author">서준교 / 영상제작2팀</span>
       <span class="news-card__date">5.13</span>
     </div>
     <span class="news-card__cta">
-      ìë¬¸ ë³´ê¸°
+      원문 보기
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
   </a>
 
-  <!-- Card: ì¤ëì¤ ì í¸ ì ê² -->
+  <!-- Card: 오디오 신호 점검 -->
   <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MTQ1OTEzMjcxMDkxMiJ9" target="_blank" rel="noopener">
     <span class="news-card__tag news-card__tag--infra">Infra</span>
-    <h3 class="news-card__title">5ì ì¤ëì¤<br>ì í¸ ì ê²</h3>
-    <p class="news-card__desc">GSSHOP LIVE, GSMYSHOP ìµì¢ ì¡ì¶ë¨ ì ì²´ ì ìì íì¸íìµëë¤.</p>
+    <h3 class="news-card__title">5월 오디오<br>신호 점검</h3>
+    <p class="news-card__desc">GSSHOP LIVE, GSMYSHOP 최종 송출단 전체 정상을 확인했습니다.</p>
     <div class="news-card__footer">
-      <span class="news-card__author">ì ì£¼ì´ / ììì ì2í</span>
+      <span class="news-card__author">유주열 / 영상제작2팀</span>
       <span class="news-card__date">5.12</span>
     </div>
     <span class="news-card__cta">
-      ìë¬¸ ë³´ê¸°
+      원문 보기
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
   </a>
 
-  <!-- Card: Teams ì± ì¦ê²¨ì°¾ê¸° -->
+  <!-- Card: Teams 앱 즐겨찾기 -->
   <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MTk3ODY0MDc1MjY0MCJ9" target="_blank" rel="noopener">
     <span class="news-card__tag news-card__tag--guide">Guide</span>
-    <h3 class="news-card__title">Teams ì±<br>ì¦ê²¨ì°¾ê¸° ë±ë¡ ë°©ë²</h3>
-    <p class="news-card__desc">Gì¤íëì¤ Teams ì± ì¦ê²¨ì°¾ê¸° ë±ë¡ ë§¤ë´ì¼ê³¼ ë§ì¤ì½í¸ë¥¼ ìê°í©ëë¤.</p>
+    <h3 class="news-card__title">Teams 앱<br>즐겨찾기 등록 방법</h3>
+    <p class="news-card__desc">G스튜디오 Teams 앱 즐겨찾기 등록 매뉴얼과 마스콑트를 소개합니다.</p>
     <div class="news-card__footer">
-      <span class="news-card__author">ê¹ì¸ì / ììì ì1í</span>
+      <span class="news-card__author">김세영 / 영상제작1팀</span>
       <span class="news-card__date">5.12</span>
     </div>
     <span class="news-card__cta">
-      ìë¬¸ ë³´ê¸°
+      원문 보기
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </span>
   </a>
@@ -617,19 +617,19 @@
 <footer class="page-footer">
   <div class="page-footer__inner">
     <a class="page-footer__cta" href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank" rel="noopener">
-      Viva Engage ì»¤ë®¤ëí° ë°ë¡ê°ê¸°
+      Viva Engage 커뮤니티 바로가기
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5.5 3L9.5 7L5.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <div class="page-footer__divider"></div>
     <p class="page-footer__legal">
-      G Studio Daily News &middot; ììì ìë¶ë¬¸ Viva Engage ì»¤ë®¤ëí° ê²ìë¬¼ ìì½<br>
-      ë³¸ íì´ì§ë ìë ìì±ëìì¼ë©°, ìë¬¸ íì¸ì ê° ì¹´ë° ì´ë¯¸ì§ë¥¼ í´ë¦­í´ ì£¼ì¸ì. &middot; GS Retail ììì ìë¶ë¬¸
+      G Studio Daily News &middot; 영상제작부문 Viva Engage 커뮤니티 게시물 요약<br>
+      본 페이지는 자동 생성되었으며, 원문 확인은 각 카드를 클릭해 주세요. &middot; GS Retail 영상제작부문
     </p>
   </div>
 </footer>
 
 <script>
-// OneDrive HTML ë·°å°ìì ì¸ë¶ ë§í¬ê° ì°¨ë¨ë ë¯ë¡ ê°ì  ì´ë ì²ë¦¬
+// OneDrive HTML 뷰어에서 외부 링크가 차단되므로 강제 이동 처리
 document.querySelectorAll('a[href^="https://engage.cloud.microsoft"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
