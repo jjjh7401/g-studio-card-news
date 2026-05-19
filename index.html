@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G Studio Daily News â 2026.05.19</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+  /* ââ Reset ââ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ââ Design Tokens (Apple Design System) ââ */
+  :root {
+    /* Brand & Accent */
+    --color-primary: #0066cc;
+    --color-primary-focus: #0071e3;
+    --color-primary-on-dark: #2997ff;
+
+    /* Surfaces */
+    --color-canvas: #ffffff;
+    --color-canvas-parchment: #f5f5f7;
+    --color-surface-pearl: #fafafc;
+    --color-surface-tile-1: #272729;
+    --color-surface-tile-2: #2a2a2c;
+    --color-surface-tile-3: #252527;
+    --color-surface-black: #000000;
+
+    /* Text */
+    --color-ink: #1d1d1f;
+    --color-body: #1d1d1f;
+    --color-body-on-dark: #ffffff;
+    --color-body-muted: #cccccc;
+    --color-ink-muted-80: #333333;
+    --color-ink-muted-48: #7a7a7a;
+
+    /* Hairlines */
+    --color-divider-soft: #f0f0f0;
+    --color-hairline: #e0e0e0;
+
+    /* Typography */
+    --font-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 17px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-section: 80px;
+
+    /* Radius */
+    --rounded-sm: 8px;
+    --rounded-md: 11px;
+    --rounded-lg: 18px;
+    --rounded-pill: 9999px;
+  }
+
+  /* ââ Base ââ */
+  html {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.47;
+    letter-spacing: -0.374px;
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--color-canvas-parchment);
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ââ Global Nav ââ */
+  .global-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-surface-black);
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--spacing-lg);
+  }
+  .global-nav__inner {
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .global-nav__brand {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.12px;
+    color: var(--color-body-on-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .global-nav__brand svg { flex-shrink: 0; }
+  .global-nav__date {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.12px;
+    color: var(--color-body-muted);
+  }
+
+  /* ââ Sub Nav (Frosted) ââ */
+  .sub-nav {
+    position: sticky;
+    top: 44px;
+    z-index: 99;
+    background: rgba(245, 245, 247, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--spacing-lg);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .sub-nav__inner {
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sub-nav__title {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.231px;
+    color: var(--color-ink);
+  }
+  .sub-nav__meta {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-ink-muted-48);
+    letter-spacing: -0.224px;
+  }
+
+  /* ââ Hero Tile (Dark) ââ */
+  .hero-tile {
+    background: var(--color-surface-tile-1);
+    padding: var(--spacing-section) var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 340px;
+  }
+  .hero-tile__inner {
+    max-width: 680px;
+  }
+  .hero-tile__eyebrow {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.224px;
+    color: var(--color-primary-on-dark);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+  }
+  .hero-tile__headline {
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07;
+    letter-spacing: -0.28px;
+    color: var(--color-body-on-dark);
+    margin-bottom: var(--spacing-md);
+  }
+  .hero-tile__tagline {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0.196px;
+    color: var(--color-body-muted);
+    margin-bottom: var(--spacing-xl);
+  }
+  .hero-tile__date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: var(--rounded-pill);
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-body-muted);
+    letter-spacing: -0.224px;
+  }
+  .hero-tile__date-badge strong {
+    color: var(--color-body-on-dark);
+    font-weight: 600;
+  }
+
+  /* ââ Section Header ââ */
+  .section-header {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: var(--spacing-xxl) var(--spacing-lg) var(--spacing-lg);
+  }
+  .section-header__title {
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.47;
+    letter-spacing: -0.374px;
+    color: var(--color-ink);
+  }
+  .section-header__count {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--color-ink-muted-48);
+    margin-top: 4px;
+  }
+
+  /* ââ Card Grid ââ */
+  .card-grid {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg) var(--spacing-xxl);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* ââ News Card (Store Utility Card style) ââ */
+  .news-card {
+    background: var(--color-canvas);
+    border: 1px solid var(--color-hairline);
+    border-radius: var(--rounded-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+  }
+  .news-card:active {
+    transform: scale(0.97);
+  }
+  .news-card:hover {
+    border-color: rgba(0,0,0,0.15);
+  }
+
+  .news-card__tag {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.12px;
+    padding: 4px 12px;
+    border-radius: var(--rounded-pill);
+    margin-bottom: var(--spacing-sm);
+  }
+  .news-card__tag--infra {
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--color-primary);
+  }
+  .news-card__tag--guide {
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--color-primary);
+  }
+  .news-card__tag--review {
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--color-primary);
+  }
+  .news-card__tag--oss {
+    background: rgba(0, 102, 204, 0.08);
+    color: var(--color-primary);
+  }
+
+  .news-card__title {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.19;
+    letter-spacing: 0.231px;
+    color: var(--color-ink);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .news-card__desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: -0.224px;
+    color: var(--color-ink-muted-80);
+    flex: 1;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .news-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-divider-soft);
+  }
+
+  .news-card__author {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.12px;
+    color: var(--color-ink-muted-48);
+  }
+
+  .news-card__date {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.12px;
+    color: var(--color-ink-muted-48);
+  }
+
+  .news-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.224px;
+    color: var(--color-primary);
+    margin-top: var(--spacing-sm);
+  }
+  .news-card__cta svg {
+    transition: transform 0.2s ease;
+  }
+  .news-card:hover .news-card__cta svg {
+    transform: translateX(3px);
+  }
+
+  /* ââ Featured Card (Spans full width, dark) ââ */
+  .news-card--featured {
+    grid-column: 1 / -1;
+    background: var(--color-surface-tile-2);
+    border-color: transparent;
+    padding: var(--spacing-xl) var(--spacing-xl);
+    flex-direction: row;
+    gap: var(--spacing-xl);
+    align-items: center;
+  }
+  .news-card--featured .news-card__content {
+    flex: 1;
+  }
+  .news-card--featured .news-card__tag {
+    background: rgba(41, 151, 255, 0.15);
+    color: var(--color-primary-on-dark);
+  }
+  .news-card--featured .news-card__title {
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.196px;
+    color: var(--color-body-on-dark);
+    margin-bottom: var(--spacing-xs);
+  }
+  .news-card--featured .news-card__desc {
+    color: var(--color-body-muted);
+    font-size: 17px;
+    line-height: 1.47;
+    letter-spacing: -0.374px;
+  }
+  .news-card--featured .news-card__footer {
+    border-top-color: rgba(255,255,255,0.1);
+  }
+  .news-card--featured .news-card__author,
+  .news-card--featured .news-card__date {
+    color: rgba(255,255,255,0.5);
+  }
+  .news-card--featured .news-card__cta {
+    color: var(--color-primary-on-dark);
+  }
+  .news-card--featured .news-card__icon {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--rounded-lg);
+    background: var(--color-surface-tile-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .news-card--featured:hover {
+    border-color: rgba(255,255,255,0.1);
+  }
+
+  /* ââ Footer ââ */
+  .page-footer {
+    background: var(--color-canvas-parchment);
+    padding: 64px var(--spacing-lg);
+    text-align: center;
+  }
+  .page-footer__inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .page-footer__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-primary);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.0;
+    padding: 11px 22px;
+    border-radius: var(--rounded-pill);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+  }
+  .page-footer__cta:active {
+    transform: scale(0.95);
+  }
+  .page-footer__divider {
+    width: 100%;
+    height: 1px;
+    background: var(--color-hairline);
+    margin: var(--spacing-xl) 0;
+  }
+  .page-footer__legal {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.12px;
+    color: var(--color-ink-muted-48);
+    line-height: 1.5;
+  }
+
+  /* ââ Responsive ââ */
+  @media (max-width: 833px) {
+    .hero-tile__headline { font-size: 40px; }
+    .hero-tile__tagline { font-size: 21px; }
+    .hero-tile { min-height: 280px; padding: var(--spacing-xxl) var(--spacing-lg); }
+    .card-grid { grid-template-columns: 1fr; }
+    .news-card--featured { flex-direction: column; }
+    .news-card--featured .news-card__icon { width: 80px; height: 80px; }
+    .section-header { padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-sm); }
+  }
+
+  @media (max-width: 640px) {
+    .hero-tile__headline { font-size: 34px; }
+    .hero-tile__tagline { font-size: 17px; }
+    .hero-tile { min-height: 240px; padding: var(--spacing-xl) var(--spacing-md); }
+    .sub-nav__meta { display: none; }
+    .section-header__title { font-size: 28px; }
+  }
+
+  @media (max-width: 419px) {
+    .hero-tile__headline { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Global Nav -->
+<nav class="global-nav">
+  <div class="global-nav__inner">
+    <div class="global-nav__brand">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect width="20" height="20" rx="4" fill="#0066cc"/>
+        <text x="10" y="14.5" text-anchor="middle" font-family="Inter, system-ui" font-size="11" font-weight="700" fill="white">G</text>
+      </svg>
+      G Studio Daily News
+    </div>
+    <span class="global-nav__date">2026.05.19 Mon</span>
+  </div>
+</nav>
+
+<!-- Sub Nav (Frosted) -->
+<div class="sub-nav">
+  <div class="sub-nav__inner">
+    <span class="sub-nav__title">Viva Engage</span>
+    <span class="sub-nav__meta">ììì ìë¶ë¬¸ ì»¤ë®¤ëí°</span>
+  </div>
+</div>
+
+<!-- Hero Tile (Dark) -->
+<section class="hero-tile">
+  <div class="hero-tile__inner">
+    <div class="hero-tile__eyebrow">Daily News</div>
+    <h1 class="hero-tile__headline">G Studio</h1>
+    <p class="hero-tile__tagline">ììì ìë¶ë¬¸ ì¤ëì ìì</p>
+    <div class="hero-tile__date-badge">
+      <strong>2026.05.19</strong> ììì¼ &middot; ìµê·¼ 7ì¼ê° ê²ìë¬¼ 6ê±´
+    </div>
+  </div>
+</section>
+
+<!-- Section Header -->
+<div class="section-header">
+  <h2 class="section-header__title">ì´ë² ì£¼ ìì</h2>
+  <p class="section-header__count">5ì 12ì¼ â 5ì 19ì¼ &middot; 6ê±´ì ì ê²ìë¬¼</p>
+</div>
+
+<!-- Card Grid -->
+<div class="card-grid">
+
+  <!-- Featured Card: ë¯¸ëì´ìë² ì ê² (Most recent) -->
+  <a class="news-card news-card--featured" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1NjcwNDcwMzc2NjUyOCJ9" target="_blank" rel="noopener">
+    <div class="news-card__icon">
+      <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <rect x="8" y="12" width="32" height="22" rx="3" stroke="#2997ff" stroke-width="2" fill="none"/>
+        <circle cx="24" cy="23" r="4" stroke="#2997ff" stroke-width="1.5" fill="none"/>
+        <line x1="8" y1="38" x2="40" y2="38" stroke="#2997ff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="news-card__content">
+      <span class="news-card__tag news-card__tag--infra">Infra</span>
+      <h3 class="news-card__title">5ì ë¯¸ëì´ìë² ì ê² ê²°ê³¼</h3>
+      <p class="news-card__desc">K2/TAKER ìë² ì ì ì ê² ìë£. ë¯¸ì¬ì© VR íì¼ ì ë¦¬ë¡ ì¤í ë¦¬ì§ë¥¼ íë³´íìµëë¤.</p>
+      <div class="news-card__footer">
+        <span class="news-card__author">ì ìë¯¼ / ììì ì2í</span>
+        <span class="news-card__date">5.16</span>
+      </div>
+      <span class="news-card__cta">
+        ìë¬¸ ë³´ê¸°
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </div>
+  </a>
+
+  <!-- Card: ì£¼ê° ë¦¬ë·° -->
+  <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MzU4NDgwMzYzNTIwMCJ9" target="_blank" rel="noopener">
+    <span class="news-card__tag news-card__tag--review">Review</span>
+    <h3 class="news-card__title">Gì¤íëì¤ ì£¼ê° ë¦¬ë·°<br>5ì 2ì£¼ì°¨</h3>
+    <p class="news-card__desc">í¬ë¡ íì¥íë¡ê·¸ë¨ ë°°í¬, AI í¨ìì¼ ì ì, 5ì ì¤íë AR ì ì© ë± ì£¼ì ì±ê³¼ë¥¼ ì ë¦¬íìµëë¤.</p>
+    <div class="news-card__footer">
+      <span class="news-card__author">ê¹ì¸ì / ììì ì1í</span>
+      <span class="news-card__date">5.14</span>
+    </div>
+    <span class="news-card__cta">
+      ìë¬¸ ë³´ê¸°
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+
+  <!-- Card: ARìë°©ì¡ -->
+  <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MzQ5NzM5ODIzOTIzMiJ9" target="_blank" rel="noopener">
+    <span class="news-card__tag news-card__tag--oss">OSS</span>
+    <h3 class="news-card__title">ARìë°©ì¡ ì ì©<br>ë°ëíë ë 5/17</h3>
+    <p class="news-card__desc">AR/LED WALL/ì¡°ëª/OSS ì¤í­ íµí© ë°°ì . ìë°©ì¡ íì¥ ê¸°ì  íì ì²´ê³ë¥¼ ê°ëíìµëë¤.</p>
+    <div class="news-card__footer">
+      <span class="news-card__author">ì´ì¸í / ììì ì1í</span>
+      <span class="news-card__date">5.14</span>
+    </div>
+    <span class="news-card__cta">
+      ìë¬¸ ë³´ê¸°
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+
+  <!-- Card: LED WALL ì ê² -->
+  <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MzIyMTI4MjIyNjE3NiJ9" target="_blank" rel="noopener">
+    <span class="news-card__tag news-card__tag--infra">Infra</span>
+    <h3 class="news-card__title">5ì LED WALL<br>ì ê² ê²°ê³¼</h3>
+    <p class="news-card__desc">LED ëª¨ë, ì§ê·¸, NC2IO ì ì ì ê²ì ìë£íìµëë¤. ì  í­ëª© ì ììëë¤.</p>
+    <div class="news-card__footer">
+      <span class="news-card__author">ìì¤êµ / ììì ì2í</span>
+      <span class="news-card__date">5.13</span>
+    </div>
+    <span class="news-card__cta">
+      ìë¬¸ ë³´ê¸°
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+
+  <!-- Card: ì¤ëì¤ ì í¸ ì ê² -->
+  <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MTQ1OTEzMjcxMDkxMiJ9" target="_blank" rel="noopener">
+    <span class="news-card__tag news-card__tag--infra">Infra</span>
+    <h3 class="news-card__title">5ì ì¤ëì¤<br>ì í¸ ì ê²</h3>
+    <p class="news-card__desc">GSSHOP LIVE, GSMYSHOP ìµì¢ ì¡ì¶ë¨ ì ì²´ ì ìì íì¸íìµëë¤.</p>
+    <div class="news-card__footer">
+      <span class="news-card__author">ì ì£¼ì´ / ììì ì2í</span>
+      <span class="news-card__date">5.12</span>
+    </div>
+    <span class="news-card__cta">
+      ìë¬¸ ë³´ê¸°
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+
+  <!-- Card: Teams ì± ì¦ê²¨ì°¾ê¸° -->
+  <a class="news-card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg1MTk3ODY0MDc1MjY0MCJ9" target="_blank" rel="noopener">
+    <span class="news-card__tag news-card__tag--guide">Guide</span>
+    <h3 class="news-card__title">Teams ì±<br>ì¦ê²¨ì°¾ê¸° ë±ë¡ ë°©ë²</h3>
+    <p class="news-card__desc">Gì¤íëì¤ Teams ì± ì¦ê²¨ì°¾ê¸° ë±ë¡ ë§¤ë´ì¼ê³¼ ë§ì¤ì½í¸ë¥¼ ìê°í©ëë¤.</p>
+    <div class="news-card__footer">
+      <span class="news-card__author">ê¹ì¸ì / ììì ì1í</span>
+      <span class="news-card__date">5.12</span>
+    </div>
+    <span class="news-card__cta">
+      ìë¬¸ ë³´ê¸°
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 2.5L8 6L4.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </a>
+
+</div>
+
+<!-- Footer -->
+<footer class="page-footer">
+  <div class="page-footer__inner">
+    <a class="page-footer__cta" href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank" rel="noopener">
+      Viva Engage ì»¤ë®¤ëí° ë°ë¡ê°ê¸°
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5.5 3L9.5 7L5.5 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="page-footer__divider"></div>
+    <p class="page-footer__legal">
+      G Studio Daily News &middot; ììì ìë¶ë¬¸ Viva Engage ì»¤ë®¤ëí° ê²ìë¬¼ ìì½<br>
+      ë³¸ íì´ì§ë ìë ìì±ëìì¼ë©°, ìë¬¸ íì¸ì ê° ì¹´ë° ì´ë¯¸ì§ë¥¼ í´ë¦­í´ ì£¼ì¸ì. &middot; GS Retail ììì ìë¶ë¬¸
+    </p>
+  </div>
+</footer>
+
+<script>
+// OneDrive HTML ë·°å°ìì ì¸ë¶ ë§í¬ê° ì°¨ë¨ë ë¯ë¡ ê°ì  ì´ë ì²ë¦¬
+document.querySelectorAll('a[href^="https://engage.cloud.microsoft"]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var url = this.getAttribute('href');
+    try { window.top.location.href = url; } catch(err) { window.open(url, '_blank'); }
+  });
+});
+</script>
+</body>
+</html>
