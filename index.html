@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G Studio Daily News — 2026.05.20</title>
+<title>G Studio Daily News â 2026.05.21</title>
 <style>
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
   :root {
     --apple-bg: #FFFFFF;
     --apple-surface: #F5F5F7;
@@ -20,239 +19,169 @@
     --hero-text: #F5F5F7;
     --featured-bg: #1D1D1F;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-    background: var(--apple-bg);
+    background: var(--apple-surface);
     color: var(--apple-text-primary);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Hero Section */
+  /* Hero */
   .hero {
     background: var(--hero-bg);
     color: var(--hero-text);
-    padding: 60px 24px 48px;
+    padding: 56px 24px 48px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
   }
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 30% 50%, rgba(0,113,227,0.08) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(94,92,230,0.06) 0%, transparent 50%);
-    animation: heroGlow 8s ease-in-out infinite alternate;
-  }
-  @keyframes heroGlow {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-2%, 2%); }
-  }
-  .hero-content { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
   .hero-logo {
-    width: 64px; height: 64px;
-    background: linear-gradient(135deg, #0071E3, #5E5CE6);
-    border-radius: 16px;
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #0071E3, #40A9FF);
+    border-radius: 14px;
     display: inline-flex; align-items: center; justify-content: center;
-    font-size: 28px; font-weight: 800; color: #fff;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
+    font-size: 24px; font-weight: 800; color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
   }
   .hero h1 {
-    font-size: 40px; font-weight: 700; letter-spacing: -0.5px;
-    line-height: 1.15; margin-bottom: 8px;
+    font-size: 32px; font-weight: 700; letter-spacing: -0.5px;
+    margin-bottom: 8px;
   }
-  .hero-date {
-    font-size: 17px; color: rgba(245,245,247,0.6);
-    font-weight: 500; margin-bottom: 6px;
+  .hero .subtitle {
+    font-size: 17px; color: #86868B; font-weight: 400;
   }
-  .hero-period {
+  .hero .date-badge {
     display: inline-block;
-    font-size: 14px; color: rgba(245,245,247,0.4);
-    border: 1px solid rgba(245,245,247,0.15);
-    border-radius: 100px; padding: 5px 16px;
-    margin-top: 8px;
+    margin-top: 16px;
+    padding: 6px 16px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    font-size: 14px; color: #A1A1A6; font-weight: 500;
   }
 
   /* Container */
   .container {
-    max-width: 980px; margin: 0 auto;
-    padding: 40px 20px 60px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
   }
 
   /* Section Title */
   .section-title {
-    font-size: 13px; font-weight: 600;
-    color: var(--apple-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 16px;
-    padding-left: 4px;
+    font-size: 22px; font-weight: 700; letter-spacing: -0.3px;
+    margin-bottom: 20px; color: var(--apple-text-primary);
   }
 
   /* Featured Card */
   .featured {
-    display: block;
     background: var(--featured-bg);
-    color: var(--hero-text);
     border-radius: var(--apple-radius);
-    padding: 40px 36px;
-    margin-bottom: 40px;
+    padding: 32px 28px;
+    margin-bottom: 28px;
+    color: #fff;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     position: relative;
     overflow: hidden;
   }
   .featured:hover {
-    transform: scale(1.01);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
   }
   .featured::after {
     content: '';
-    position: absolute;
-    top: 0; right: 0;
-    width: 40%; height: 100%;
-    background: radial-gradient(circle at 80% 30%, rgba(0,113,227,0.15) 0%, transparent 60%);
-    pointer-events: none;
+    position: absolute; top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,113,227,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(40%, -40%);
   }
   .featured .card-badge {
-    background: rgba(0,113,227,0.2);
-    color: #5AC8FA;
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(255,107,53,0.2);
+    color: #FF6B35;
+    border-radius: 6px;
+    font-size: 12px; font-weight: 600;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
   }
   .featured .card-title {
-    font-size: 28px; font-weight: 700;
-    line-height: 1.3; margin: 16px 0 12px;
-    letter-spacing: -0.3px;
-    position: relative; z-index: 1;
+    font-size: 22px; font-weight: 700; line-height: 1.35;
+    margin-bottom: 10px; letter-spacing: -0.3px;
   }
   .featured .card-desc {
-    font-size: 16px; line-height: 1.6;
-    color: rgba(245,245,247,0.7);
-    position: relative; z-index: 1;
-    max-width: 560px;
+    font-size: 15px; color: #A1A1A6; line-height: 1.6;
+    margin-bottom: 18px;
   }
   .featured .card-meta {
-    color: rgba(245,245,247,0.5);
-    margin-top: 20px;
-    position: relative; z-index: 1;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 13px; color: #86868B;
   }
-  .featured .card-highlights {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-top: 16px;
-    position: relative; z-index: 1;
-  }
-  .featured .highlight-tag {
-    font-size: 12px; font-weight: 500;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 100px;
-    padding: 4px 12px;
-    color: rgba(245,245,247,0.7);
-  }
+  .featured .card-author { font-weight: 600; color: #A1A1A6; }
 
   /* Card Grid */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    margin-bottom: 32px;
   }
-  @media (max-width: 640px) {
-    .card-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 28px; }
-    .featured { padding: 28px 24px; }
-    .featured .card-title { font-size: 22px; }
-    .container { padding: 28px 16px 48px; }
-  }
-
-  /* Cards */
   .card {
-    display: flex; flex-direction: column;
-    background: var(--apple-surface);
+    background: var(--apple-bg);
     border-radius: var(--apple-radius);
-    padding: 28px 24px;
+    padding: 24px 22px;
     text-decoration: none;
-    color: var(--apple-text-primary);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    border: 1px solid transparent;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--apple-shadow);
+    border: 1px solid rgba(0,0,0,0.04);
   }
   .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--apple-shadow);
-    border-color: var(--apple-border);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
   }
-
-  /* Badge */
-  .card-badge {
+  .card .card-badge {
     display: inline-block;
+    padding: 3px 8px;
+    border-radius: 5px;
     font-size: 11px; font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 100px;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
+    margin-bottom: 12px;
     width: fit-content;
+    letter-spacing: 0.2px;
   }
-  .badge-equipment { background: rgba(0,180,216,0.12); color: #00B4D8; }
-  .badge-broadcast { background: rgba(255,107,53,0.12); color: #FF6B35; }
-  .badge-notice { background: rgba(46,204,113,0.12); color: #2ECC71; }
-  .badge-post { background: rgba(123,97,255,0.12); color: #7B61FF; }
-
-  /* Card Content */
-  .card-title {
-    font-size: 18px; font-weight: 650;
-    line-height: 1.35; margin: 12px 0 8px;
-    letter-spacing: -0.2px;
+  .badge-production { background: rgba(255,107,53,0.1); color: #FF6B35; }
+  .badge-post { background: rgba(123,97,255,0.1); color: #7B61FF; }
+  .badge-tech { background: rgba(0,180,216,0.1); color: #00B4D8; }
+  .badge-education { background: rgba(46,204,113,0.1); color: #2ECC71; }
+  .badge-notice { background: rgba(231,76,60,0.1); color: #E74C3C; }
+  .badge-news { background: rgba(110,110,115,0.1); color: #6E6E73; }
+  .card .card-title {
+    font-size: 16px; font-weight: 700; line-height: 1.4;
+    margin-bottom: 8px; letter-spacing: -0.2px;
+    color: var(--apple-text-primary);
   }
-  .card-desc {
-    font-size: 14px; line-height: 1.55;
-    color: var(--apple-text-secondary);
+  .card .card-desc {
+    font-size: 13px; color: var(--apple-text-secondary);
+    line-height: 1.55; margin-bottom: 16px;
     flex: 1;
   }
-  .card-meta {
+  .card .card-meta {
     display: flex; justify-content: space-between;
-    align-items: center;
     font-size: 12px; color: var(--apple-text-secondary);
-    margin-top: 16px;
-    padding-top: 12px;
     border-top: 1px solid var(--apple-border);
+    padding-top: 12px; margin-top: auto;
   }
-  .card-author { font-weight: 600; color: var(--apple-text-primary); }
-
-  /* Status Pill */
-  .status-ok {
-    display: inline-flex; align-items: center; gap: 4px;
-    font-size: 12px; font-weight: 500;
-    color: #34C759;
-  }
-  .status-ok::before {
-    content: '';
-    width: 6px; height: 6px;
-    background: #34C759;
-    border-radius: 50%;
-  }
+  .card .card-author { font-weight: 600; color: var(--apple-text-primary); }
 
   /* Footer */
   .footer {
     text-align: center;
-    padding: 32px 20px 40px;
-    border-top: 1px solid var(--apple-border);
-    max-width: 980px;
-    margin: 0 auto;
-  }
-  .footer-logo {
-    font-size: 18px; font-weight: 700;
-    color: var(--apple-text-primary);
-    letter-spacing: -0.3px;
-    margin-bottom: 6px;
-  }
-  .footer-sub {
-    font-size: 12px; color: var(--apple-text-secondary);
+    padding: 32px 24px 40px;
+    font-size: 13px; color: var(--apple-text-secondary);
   }
   .footer a {
     color: var(--apple-blue);
@@ -260,98 +189,112 @@
     font-weight: 500;
   }
   .footer a:hover { text-decoration: underline; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 26px; }
+    .hero { padding: 40px 20px 36px; }
+    .card-grid { grid-template-columns: 1fr; }
+    .featured .card-title { font-size: 20px; }
+    .container { padding: 24px 16px 40px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- Hero -->
 <section class="hero">
-  <div class="hero-content">
-    <div class="hero-logo">G</div>
-    <h1>G Studio Daily News</h1>
-    <div class="hero-date">2026년 5월 20일 화요일</div>
-    <span class="hero-period">5.13 — 5.20 주요 소식</span>
-  </div>
+  <div class="hero-logo">G</div>
+  <h1>G Studio Daily News</h1>
+  <p class="subtitle">ììì ìë¶ë¬¸ ì£¼ê° ìì</p>
+  <span class="date-badge">5.12 â 5.20 ì£¼ì ìì</span>
 </section>
 
-<!-- Content -->
 <div class="container">
 
-  <!-- Featured -->
-  <div class="section-title">Featured</div>
+  <h2 class="section-title">ì´ë² ì£¼ íì´ë¼ì´í¸</h2>
+
   <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="featured" target="_blank">
-    <span class="card-badge">주간 리뷰</span>
-    <h2 class="card-title">G스튜디오 주간 리뷰 — 5월 2주차</h2>
-    <p class="card-desc">영상제작부문 주간 업무 보고를 시각화한 주간 리뷰입니다. 이미지 생성 크롬 확장프로그램 배포, AI 패션쇼 제작, '지금 백지연' 특집 강조 집별 운영, 5월 특집 오프닝 AR 적용 등 주요 성과를 공유합니다.</p>
-    <div class="card-highlights">
-      <span class="highlight-tag">크롬 확장프로그램</span>
-      <span class="highlight-tag">AI 패션쇼</span>
-      <span class="highlight-tag">AR 오프닝</span>
-      <span class="highlight-tag">특집 운영</span>
-    </div>
+    <div class="card-badge">ì£¼ê  ë¦¬ë·°</div>
+    <h3 class="card-title">ììì ì2í ì£¼ê°ë¦¬ë·° â 5ì 3ì£¼ì°¨</h3>
+    <p class="card-desc">5ì 11ì¼~17ì¼ ì£¼ê° ë¦¬ë·°. ì ê¸°ì ê² 2ê±´(ë¶ì¡° ë¹ëì¤ìë²Â·ì¤ëì¤ ì í¸), AI ìì í«ë íì ìì ì ì, KOBA ë¦¬ë·° ë± í ì£¼ê° ì£¼ì ìë¬´ë¥¼ ê³µì í©ëë¤.</p>
     <div class="card-meta">
-      <span class="card-author">김세영 · 영상제작1팀</span>
-      <span>5월 13일</span>
+      <span class="card-author">ê¹ë¯¼êµ­ Â· ììì ì2í</span>
+      <span>5ì 20ì¼</span>
     </div>
   </a>
 
-  <!-- Grid -->
-  <div class="section-title">This Week</div>
+  <h2 class="section-title">ìµì  ìì</h2>
+
   <div class="card-grid">
 
-    <!-- Card 1: 미디어서버 점검 -->
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-equipment">장비 & 기술</span>
-      <h3 class="card-title">5월 미디어서버 점검 결과 공유</h3>
-      <p class="card-desc">K2, TAKER 리뷰팀 결과 이상없음. 미사용 VR 삭제 완료(최근 1개월 VR 제외). 비디오파트 RM 월간 정기 점검.</p>
+      <div class="card-badge badge-post">í¬ì¤í¸ íë¡ëì</div>
+      <h3 class="card-title">AI ìì í«ë íì ìì</h3>
+      <p class="card-desc">ììì ì2íìì AI ììì íì©í í«ë íì ììì ì ìíì¬ ê³µì í©ëë¤.</p>
       <div class="card-meta">
-        <span class="card-author">신상민 · 영상제작2팀</span>
-        <span>5월 16일 <span class="status-ok">정상</span></span>
+        <span class="card-author">ê¹ë¯¼êµ­</span>
+        <span>5ì 20ì¼</span>
       </div>
     </a>
 
-    <!-- Card 2: AR 생방송 -->
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-broadcast">촬영 현장</span>
-      <h3 class="card-title">[OSS] AR생방송 적용 — 바디프렌드</h3>
-      <p class="card-desc">5/17(일) 21:35 바디프렌드 방송에 AR 효과 적용. AR 디자인·LEDWALL·AR 조명·OSS 부조 전체 스탭 협업 완료.</p>
+      <div class="card-badge badge-tech">ì¥ë¹ & ê¸°ì </div>
+      <h3 class="card-title">5ì ë¯¸ëì´ìë² ì ê² ê²°ê³¼</h3>
+      <p class="card-desc">K2, TAKER ë¦¬ë¶í ê²°ê³¼ ì´ììì. ë¯¸ì¬ì© VR ì­ì  ìë£. ë¹ëì¤ìë² ì ê²ì¼ì§ ì²¨ë¶.</p>
       <div class="card-meta">
-        <span class="card-author">이세훈 · 영상제작1팀</span>
-        <span>5월 13일</span>
+        <span class="card-author">ì ìë¯¼</span>
+        <span>5ì 16ì¼</span>
       </div>
     </a>
 
-    <!-- Card 3: LED WALL 점검 -->
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-equipment">장비 & 기술</span>
-      <h3 class="card-title">5월 LED WALL 점검결과 공유</h3>
-      <p class="card-desc">LED WALL 모듈·지그 상태·NC2IO 리뷰팀 결과 모두 이상 없음. RISK 관리 월간 정기 점검 완료.</p>
+      <div class="card-badge badge-production">ì´¬ì íì¥</div>
+      <h3 class="card-title">[OSS] ARìë°©ì¡ ì ì©</h3>
+      <p class="card-desc">5/17 ë°ëíë ë ë°©ì¡ìì AR ì ì©. AR ëìì¸, LEDWALL, AR ì¡°ëª, OSS ë¶ì¡° ì¤í­ ë°°ì  ìë£.</p>
       <div class="card-meta">
-        <span class="card-author">서준교 · 영상제작2팀</span>
-        <span>5월 13일 <span class="status-ok">정상</span></span>
+        <span class="card-author">ì´ì¸í</span>
+        <span>5ì 13ì¼</span>
       </div>
     </a>
 
-    <!-- Card 4: 오디오 신호 점검 -->
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-equipment">장비 & 기술</span>
-      <h3 class="card-title">5월 오디오 신호 점검</h3>
-      <p class="card-desc">GSSHOP LIVE·GSMYSHOP 최종 송출단 오디오 신호 월 1회 정기 점검. CATV HD·SKYLIFE·IPTV 전 채널 정상.</p>
+      <div class="card-badge badge-notice">ì£¼ê  ë¦¬ë·°</div>
+      <h3 class="card-title">ììì ì1í ì£¼êë¦¬ë·° â 5ì 2ì£¼ì°¨</h3>
+      <p class="card-desc">í¬ë¡¬ íì¥íë¡ê·¸ë¨ ë°°í¬, AI í¨ìì¼ ì ì, 'ì§ê¸ ë°±ì§ì°' ê°ì¡° ì§§ë² ì´ì, 5ì í¹ì§ AR ì ì©.</p>
       <div class="card-meta">
-        <span class="card-author">유주열 · 영상제작2팀</span>
-        <span>5월 12일 <span class="status-ok">정상</span></span>
+        <span class="card-author">ê¹ì¸ì</span>
+        <span>5ì 13ì¼</span>
+      </div>
+    </a>
+
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
+      <div class="card-badge badge-tech">ì¥ë¹ & ê¸°ì </div>
+      <h3 class="card-title">5ì LED WALL ì ê²ê²°ê³¼</h3>
+      <p class="card-desc">LED WALL ëª¨ëÂ·ì§ê·¸ ìíÂ·NC2IO ë¦¬ë¶í ê²°ê³¼ ëª¨ë ì´ì ìì. ì ê²ì¼ì§ ì²¨ë¶.</p>
+      <div class="card-meta">
+        <span class="card-author">ìì¤êµ</span>
+        <span>5ì 13ì¼</span>
+      </div>
+    </a>
+
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
+      <div class="card-badge badge-tech">ì¥ë¹ & ê¸°ì </div>
+      <h3 class="card-title">5ì ì¤ëì¤ ì í¸ ì ê²</h3>
+      <p class="card-desc">GSSHOP LIVEÂ·GSMYSHOP ìµì¢ ì¡ì¶ë¨ ì¤ëì¤ ì í¸ ì ê² ê²°ê³¼ ëª¨ë  ì±ë ì ì.</p>
+      <div class="card-meta">
+        <span class="card-author">ì ì£¼ì´</span>
+        <span>5ì 12ì¼</span>
       </div>
     </a>
 
   </div>
+
 </div>
 
-<!-- Footer -->
 <footer class="footer">
-  <div class="footer-logo">G Studio</div>
-  <p class="footer-sub">
-    쇼핑BU 영상제작부문 &middot;
-    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank">Viva Engage에서 보기</a>
+  <p>Â© 2026 G Studio Â· GSë¦¬íì¼ ììì ìë¶ë¬¸</p>
+  <p style="margin-top:8px;">
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank">G Studio ì»¤ë®¤ëí° ë°ë¡ê°ê¸° â</a>
   </p>
 </footer>
 
