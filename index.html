@@ -3,109 +3,317 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G Studio Daily News — 2026.05.22</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>G Studio Daily News — 2026.05.23</title>
 <style>
-:root {
-  --apple-bg: #FFFFFF;
-  --apple-surface: #F5F5F7;
-  --apple-text-primary: #1D1D1F;
-  --apple-text-secondary: #6E6E73;
-  --apple-blue: #0071E3;
-  --apple-border: #D2D2D7;
-  --apple-radius: 18px;
-  --apple-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  --hero-bg: #1D1D1F;
-  --hero-text: #F5F5F7;
-  --featured-bg: #1D1D1F;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: var(--apple-surface);
-  color: var(--apple-text-primary);
-  -webkit-font-smoothing: antialiased;
-}
-.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-.hero { background: var(--hero-bg); padding: 60px 0 50px; text-align: center; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 50%, rgba(0,113,227,0.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(94,92,230,0.1) 0%, transparent 50%); animation: heroGlow 8s ease-in-out infinite alternate; }
-@keyframes heroGlow { 0% { transform: translate(0, 0); } 100% { transform: translate(-5%, 5%); } }
-.hero-content { position: relative; z-index: 1; }
-.hero-logo { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: linear-gradient(135deg, #0071E3, #5E5CE6); border-radius: 20px; margin-bottom: 20px; box-shadow: 0 8px 32px rgba(0,113,227,0.3); }
-.hero-logo span { font-size: 32px; font-weight: 800; color: #fff; letter-spacing: -1px; }
-.hero h1 { font-size: 44px; font-weight: 800; color: var(--hero-text); letter-spacing: -1.5px; margin-bottom: 8px; line-height: 1.1; }
-.hero .subtitle { font-size: 20px; font-weight: 500; color: rgba(245,245,247,0.6); letter-spacing: -0.3px; }
-.hero .date-range { display: inline-block; margin-top: 16px; padding: 8px 20px; background: rgba(255,255,255,0.08); border-radius: 100px; font-size: 14px; font-weight: 500; color: rgba(245,245,247,0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.06); }
-.section-title { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--apple-text-secondary); margin: 40px 0 20px; }
-.featured { background: var(--featured-bg); border-radius: var(--apple-radius); padding: 44px 40px; margin-bottom: 16px; text-decoration: none; display: block; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden; }
-.featured::after { content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(135deg, transparent, rgba(0,113,227,0.08)); pointer-events: none; }
-.featured:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
-.featured .card-badge { display: inline-block; padding: 5px 12px; background: rgba(0,113,227,0.2); color: #5AC8FA; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; }
-.featured .card-title { font-size: 28px; font-weight: 700; color: var(--hero-text); letter-spacing: -0.8px; line-height: 1.3; margin-bottom: 12px; }
-.featured .card-desc { font-size: 16px; color: rgba(245,245,247,0.6); line-height: 1.6; margin-bottom: 20px; max-width: 560px; }
-.featured .card-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
-.featured .card-tags span { padding: 4px 10px; background: rgba(255,255,255,0.06); border-radius: 6px; font-size: 12px; color: rgba(245,245,247,0.5); font-weight: 500; }
-.featured .card-meta { display: flex; align-items: center; gap: 12px; }
-.featured .card-author { font-size: 14px; font-weight: 600; color: rgba(245,245,247,0.8); }
-.featured .card-date { font-size: 13px; color: rgba(245,245,247,0.4); }
-.card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 60px; }
-.card { background: var(--apple-bg); border-radius: var(--apple-radius); padding: 32px 28px; text-decoration: none; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid rgba(0,0,0,0.04); }
-.card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
-.card .card-badge { display: inline-block; padding: 4px 10px; border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 14px; width: fit-content; }
-.badge-announce { background: rgba(231,76,60,0.1); color: #E74C3C; }
-.badge-tech { background: rgba(0,180,216,0.1); color: #00B4D8; }
-.badge-ai { background: rgba(123,97,255,0.1); color: #7B61FF; }
-.card .card-title { font-size: 20px; font-weight: 700; color: var(--apple-text-primary); letter-spacing: -0.5px; line-height: 1.35; margin-bottom: 10px; }
-.card .card-desc { font-size: 14px; color: var(--apple-text-secondary); line-height: 1.6; margin-bottom: 20px; flex: 1; }
-.card .card-meta { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--apple-surface); }
-.card .card-author { font-size: 13px; font-weight: 600; color: var(--apple-text-primary); }
-.card .card-date { font-size: 12px; color: var(--apple-text-secondary); }
-.footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--apple-border); }
-.footer p { font-size: 13px; color: var(--apple-text-secondary); }
-.footer a { color: var(--apple-blue); text-decoration: none; font-weight: 500; }
-.footer a:hover { text-decoration: underline; }
-@media (max-width: 640px) { .hero h1 { font-size: 32px; } .hero .subtitle { font-size: 17px; } .featured { padding: 32px 24px; } .featured .card-title { font-size: 22px; } .card-grid { grid-template-columns: 1fr; } .container { padding: 0 16px; } }
+  @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+  :root {
+    --apple-bg: #FFFFFF;
+    --apple-surface: #F5F5F7;
+    --apple-text-primary: #1D1D1F;
+    --apple-text-secondary: #6E6E73;
+    --apple-blue: #0071E3;
+    --apple-border: #D2D2D7;
+    --apple-radius: 18px;
+    --apple-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --hero-bg: #1D1D1F;
+    --hero-text: #F5F5F7;
+    --featured-bg: #1D1D1F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--apple-surface);
+    color: var(--apple-text-primary);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .hero {
+    background: var(--hero-bg);
+    color: var(--hero-text);
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .hero-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px; height: 56px;
+    background: #2680EB;
+    border-radius: 14px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-bottom: 6px;
+  }
+  .hero .subtitle {
+    font-size: 17px;
+    color: #A1A1A6;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+  }
+  .hero .date-range {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 16px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    font-size: 13px;
+    color: #A1A1A6;
+    font-weight: 500;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
+  }
+
+  .section-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--apple-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .featured {
+    display: block;
+    background: var(--featured-bg);
+    color: var(--hero-text);
+    border-radius: var(--apple-radius);
+    padding: 32px 28px;
+    text-decoration: none;
+    margin-bottom: 32px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  }
+  .featured:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  }
+  .featured .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(123,97,255,0.2);
+    color: #B8A5FF;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 14px;
+  }
+  .featured h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+  .featured .desc {
+    font-size: 15px;
+    color: #A1A1A6;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .featured .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #86868B;
+  }
+  .featured .author { font-weight: 500; }
+  .featured .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .featured .tag {
+    padding: 3px 8px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 5px;
+    font-size: 11px;
+    color: #A1A1A6;
+    font-weight: 500;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    display: block;
+    background: var(--apple-bg);
+    border-radius: var(--apple-radius);
+    padding: 24px 22px;
+    text-decoration: none;
+    color: var(--apple-text-primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: var(--apple-shadow);
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  .card .card-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    margin-bottom: 12px;
+  }
+  .card .card-badge.red { background: #FFF0F0; color: #E74C3C; }
+  .card .card-badge.cyan { background: #E8F8FC; color: #00829B; }
+
+  .card h3 {
+    font-size: 17px;
+    font-weight: 650;
+    letter-spacing: -0.3px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .card .card-desc {
+    font-size: 13px;
+    color: var(--apple-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #86868B;
+  }
+  .card .card-author { font-weight: 500; }
+
+  .card-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .card-detail .item {
+    font-size: 12px;
+    color: var(--apple-text-secondary);
+    background: var(--apple-surface);
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 32px 24px 40px;
+    font-size: 12px;
+    color: #86868B;
+  }
+  .footer a {
+    color: var(--apple-blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 28px; }
+    .hero .subtitle { font-size: 15px; }
+    .card-grid { grid-template-columns: 1fr; }
+    .featured h2 { font-size: 20px; }
+    .container { padding: 24px 16px 40px; }
+  }
 </style>
 </head>
 <body>
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-logo"><span>G</span></div>
-    <h1>Daily News</h1>
-    <p class="subtitle">G Studio 영상제작부문</p>
-    <span class="date-range">5.15 — 5.22 주요 소식</span>
-  </div>
-</section>
-<div class="container">
-  <p class="section-title">Featured</p>
+
+<header class="hero">
+  <div class="hero-logo">G</div>
+  <h1>G Studio Daily News</h1>
+  <p class="subtitle">영상제작부문 소식을 한눈에</p>
+  <span class="date-range">5.17 — 5.23 주요 소식</span>
+</header>
+
+<main class="container">
+
+  <p class="section-label">Featured</p>
   <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="featured" target="_blank">
-    <span class="card-badge">AI · 그래픽디자인</span>
-    <h2 class="card-title">AI 시즌 무드 비주얼 제안 사례 공유</h2>
-    <p class="card-desc">제품 컨셉과 시즌 무드를 반영한 비주얼 제안 사례를 공유합니다. 코데즈컴바인 'AIR WIND' 여름 라인, 에버콜라겐 썸머 프로모션, 라코스테 테니스 코트 그래픽 등 AI 활용 비주얼과 무빙 제안.</p>
-    <div class="card-tags"><span>#SP</span><span>#AI</span><span>#무드코드</span><span>#그래픽디자인</span></div>
-    <div class="card-meta"><span class="card-author">최현정 · 영상아트팀</span><span class="card-date">5월 21일</span></div>
+    <span class="badge">포스트 프로덕션</span>
+    <div class="tags">
+      <span class="tag">#SP</span>
+      <span class="tag">#AI</span>
+      <span class="tag">#무드코드</span>
+      <span class="tag">#그래픽디자인</span>
+    </div>
+    <h2>AI 활용 시즌 비주얼 제안 사례 공유</h2>
+    <p class="desc">제품 컨셉과 시즌 무드를 반영한 비주얼 제안. 코데즈컴바인 'AIR WIND' 여름 라인, 에버콜라겐 썸머 프로모션, 라코스테 테니스 코트 그래픽 — 모든 제작물 AI 활용 제작</p>
+    <div class="meta">
+      <span class="author">최현정 · 영상아트팀</span>
+      <span>5월 22일</span>
+    </div>
   </a>
-  <p class="section-title">This Week</p>
+
+  <p class="section-label">This Week</p>
   <div class="card-grid">
+
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-announce">공지사항</span>
-      <h3 class="card-title">G스튜디오 주간리뷰 5월 3주차</h3>
-      <p class="card-desc">영상제작부문 주간 업무 보고를 시각화한 'G스튜디오 주간 리뷰' — 5월 11일 ~ 5월 17일 주간 리뷰를 공유합니다.</p>
-      <div class="card-meta"><span class="card-author">김민국 · 영상제작2팀</span><span class="card-date">5월 20일</span></div>
+      <div class="card-badge red">공지사항</div>
+      <h3>G스튜디오 주간리뷰 5월 3주차</h3>
+      <div class="card-detail">
+        <span class="item">정기점검 2건</span>
+        <span class="item">AI 음원 팝업</span>
+        <span class="item">KOBA 리뷰</span>
+      </div>
+      <p class="card-desc">영상제작부문 주간 업무 보고 시각화. 5월 11일~17일 주간 리뷰 공유</p>
+      <div class="card-meta">
+        <span class="card-author">김민국 · 영상제작2팀</span>
+        <span>5월 21일</span>
+      </div>
     </a>
+
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-tech">장비 &amp; 기술</span>
-      <h3 class="card-title">5월 미디어서버 점검 결과 공유</h3>
-      <p class="card-desc">영상제작2팀 비디오파트 RM 목적 미디어서버 월간 점검 결과. K2, TAKER 리부팅 이상없음. 미사용 VR 삭제 완료.</p>
-      <div class="card-meta"><span class="card-author">신상민 · 영상제작2팀</span><span class="card-date">5월 15일</span></div>
+      <div class="card-badge cyan">장비 &amp; 기술</div>
+      <h3>5월 미디어서버 점검 결과 공유</h3>
+      <div class="card-detail">
+        <span class="item">K2 정상</span>
+        <span class="item">TAKER 정상</span>
+        <span class="item">VR 정리</span>
+      </div>
+      <p class="card-desc">비디오파트 RM 목적 미디어서버 정기 점검. K2, TAKER 리부팅 이상없음. 미사용 VR 삭제 완료</p>
+      <div class="card-meta">
+        <span class="card-author">신상민 · 영상제작2팀</span>
+        <span>5월 15일</span>
+      </div>
     </a>
+
   </div>
-</div>
+</main>
+
 <footer class="footer">
-  <div class="container">
-    <p>© 2026 G Studio · GS리테일 영상제작부문 · <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank">G Studio 바로가기</a></p>
-  </div>
+  <p style="margin-bottom:8px;">
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank">G Studio 바로가기 →</a>
+  </p>
+  <p>© 2026 GS Retail · 영상제작부문 G Studio</p>
 </footer>
+
 </body>
 </html>
