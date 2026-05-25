@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G Studio Daily News — 2026.05.24</title>
+<title>G Studio Daily News — 2026.05.25</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --apple-bg: #FFFFFF;
@@ -18,17 +20,14 @@
     --hero-text: #F5F5F7;
     --featured-bg: #1D1D1F;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Pretendard', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: var(--apple-surface);
     color: var(--apple-text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   .hero {
     background: var(--hero-bg);
     color: var(--hero-text);
@@ -37,352 +36,131 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero::before {
     content: '';
     position: absolute;
-    top: -60%;
-    left: -20%;
-    width: 140%;
-    height: 200%;
-    background: radial-gradient(ellipse at 30% 50%, rgba(0,113,227,0.12) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 30%, rgba(94,92,230,0.08) 0%, transparent 50%);
-    pointer-events: none;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(0,113,227,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(94,92,230,0.1) 0%, transparent 60%);
+    animation: heroGlow 8s ease-in-out infinite alternate;
   }
-
+  @keyframes heroGlow {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-5%, 5%); }
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
   .hero-logo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 56px; height: 56px;
     background: linear-gradient(135deg, #0071E3, #5E5CE6);
     border-radius: 14px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 800; color: #fff;
+    margin-bottom: 20px; letter-spacing: -1px;
   }
-
-  .hero-title {
-    font-size: 36px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-subtitle {
-    font-size: 18px;
-    color: rgba(245,245,247,0.7);
-    font-weight: 400;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-date {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 6px 16px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 20px;
-    font-size: 13px;
-    color: rgba(245,245,247,0.6);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 32px 20px 48px;
-  }
-
-  .section-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--apple-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-  }
-
+  .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.1; }
+  .hero .subtitle { font-size: 18px; color: rgba(245,245,247,0.7); font-weight: 400; margin-bottom: 6px; }
+  .hero .date-range { font-size: 14px; color: rgba(245,245,247,0.5); font-weight: 500; letter-spacing: 0.5px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
+  .section-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--apple-text-secondary); margin-bottom: 16px; }
   .featured-card {
-    display: block;
-    background: var(--featured-bg);
-    color: var(--hero-text);
-    border-radius: var(--apple-radius);
-    padding: 32px 28px;
-    text-decoration: none;
-    margin-bottom: 32px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    overflow: hidden;
+    display: block; background: var(--featured-bg); color: var(--hero-text);
+    border-radius: var(--apple-radius); padding: 36px 32px;
+    text-decoration: none; margin-bottom: 32px;
+    position: relative; overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-
+  .featured-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
   .featured-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: radial-gradient(ellipse at 100% 0%, rgba(0,113,227,0.15) 0%, transparent 70%);
-    pointer-events: none;
+    content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%;
+    background: linear-gradient(135deg, transparent 30%, rgba(0,113,227,0.12) 100%);
   }
-
-  .featured-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-  }
-
   .featured-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    background: rgba(123,97,255,0.25);
-    color: #B8A9FF;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    margin-bottom: 16px;
-    position: relative;
-    z-index: 1;
+    display: inline-block; padding: 4px 12px; border-radius: 100px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+    margin-bottom: 16px; position: relative; z-index: 1;
   }
-
-  .featured-title {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.35;
-    margin-bottom: 12px;
-    letter-spacing: -0.3px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .featured-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    color: rgba(245,245,247,0.7);
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .featured-tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 16px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .featured-tag {
-    padding: 3px 8px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 4px;
-    font-size: 11px;
-    color: rgba(245,245,247,0.5);
-  }
-
-  .featured-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    color: rgba(245,245,247,0.45);
-    position: relative;
-    z-index: 1;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
+  .badge-post-production { background: rgba(123,97,255,0.25); color: #B4A0FF; }
+  .badge-announcement-light { background: rgba(231,76,60,0.1); color: #E74C3C; }
+  .featured-title { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 12px; position: relative; z-index: 1; }
+  .featured-desc { font-size: 15px; line-height: 1.6; color: rgba(245,245,247,0.7); margin-bottom: 20px; position: relative; z-index: 1; }
+  .featured-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: rgba(245,245,247,0.5); position: relative; z-index: 1; }
+  .meta-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(245,245,247,0.3); }
+  .card-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
   .card {
-    display: block;
-    background: var(--apple-bg);
-    border-radius: var(--apple-radius);
-    padding: 24px;
-    text-decoration: none;
-    color: var(--apple-text-primary);
-    box-shadow: var(--apple-shadow);
-    border: 1px solid rgba(0,0,0,0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block; background: var(--apple-bg); border-radius: var(--apple-radius);
+    padding: 28px; text-decoration: none; color: var(--apple-text-primary);
+    box-shadow: var(--apple-shadow); border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  }
-
-  .card-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    margin-bottom: 12px;
-  }
-
-  .badge-announce { background: rgba(231,76,60,0.1); color: #E74C3C; }
-  .badge-post { background: rgba(123,97,255,0.1); color: #7B61FF; }
-  .badge-tech { background: rgba(0,180,216,0.1); color: #00B4D8; }
-  .badge-edu { background: rgba(46,204,113,0.1); color: #2ECC71; }
-  .badge-news { background: rgba(110,110,115,0.1); color: #6E6E73; }
-
-  .card-title {
-    font-size: 17px;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-bottom: 8px;
-    letter-spacing: -0.2px;
-  }
-
-  .card-desc {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--apple-text-secondary);
-    margin-bottom: 16px;
-  }
-
-  .card-highlights {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 14px;
-  }
-
-  .card-highlight {
-    padding: 3px 8px;
-    background: var(--apple-surface);
-    border-radius: 4px;
-    font-size: 11px;
-    color: var(--apple-text-secondary);
-  }
-
-  .card-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    color: var(--apple-text-secondary);
-  }
-
-  .card-author { font-weight: 500; }
-  .card-views { font-size: 12px; color: var(--apple-border); }
-
-  .footer {
-    text-align: center;
-    padding: 32px 20px 48px;
-    border-top: 1px solid var(--apple-border);
-    max-width: 680px;
-    margin: 0 auto;
-  }
-
-  .footer-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--apple-text-secondary);
-    text-decoration: none;
-    margin-bottom: 8px;
-  }
-
-  .footer-logo-icon {
-    width: 24px;
-    height: 24px;
-    background: linear-gradient(135deg, #0071E3, #5E5CE6);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-  }
-
-  .footer-copy { font-size: 12px; color: var(--apple-border); }
-
-  @media (max-width: 480px) {
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .card-badge { display: inline-block; padding: 4px 10px; border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: 0.3px; margin-bottom: 14px; }
+  .card-title { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.35; margin-bottom: 8px; }
+  .card-desc { font-size: 14px; line-height: 1.6; color: var(--apple-text-secondary); margin-bottom: 16px; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .card-tag { font-size: 11px; font-weight: 500; color: var(--apple-blue); background: rgba(0,113,227,0.08); padding: 3px 10px; border-radius: 100px; }
+  .card-meta { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--apple-text-secondary); }
+  .footer { text-align: center; padding: 32px 24px 48px; border-top: 1px solid var(--apple-border); max-width: 720px; margin: 0 auto; }
+  .footer p { font-size: 12px; color: var(--apple-text-secondary); line-height: 1.8; }
+  .footer a { color: var(--apple-blue); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
     .hero { padding: 48px 20px 36px; }
-    .hero-title { font-size: 28px; }
-    .hero-subtitle { font-size: 16px; }
-    .featured-card { padding: 24px 20px; }
-    .featured-title { font-size: 19px; }
+    .hero h1 { font-size: 30px; }
+    .featured-card { padding: 28px 24px; }
+    .featured-title { font-size: 22px; }
+    .card { padding: 22px 20px; }
     .container { padding: 24px 16px 40px; }
   }
 </style>
 </head>
 <body>
-
 <header class="hero">
-  <div class="hero-logo">G</div>
-  <h1 class="hero-title">G Studio Daily News</h1>
-  <p class="hero-subtitle">영상제작부문 주요 소식</p>
-  <span class="hero-date">5.18 — 5.24 주요 소식</span>
+  <div class="hero-content">
+    <div class="hero-logo">G</div>
+    <h1>Daily News</h1>
+    <p class="subtitle">G Studio 영상제작부문 소식</p>
+    <p class="date-range">5.19 — 5.25 주요 소식</p>
+  </div>
 </header>
-
 <main class="container">
-
   <p class="section-label">Featured</p>
   <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="featured-card" target="_blank">
-    <span class="featured-badge">포스트 프로덕션</span>
-    <div class="featured-tags">
-      <span class="featured-tag">#SP</span>
-      <span class="featured-tag">#AI</span>
-      <span class="featured-tag">#무드코드</span>
-      <span class="featured-tag">#그래픽디자인</span>
-    </div>
-    <h2 class="featured-title">AI 활용 시즌 비주얼 제안 사례 공유</h2>
-    <p class="featured-desc">제품 컨셉과 시즌 무드를 반영한 비주얼 제안 사례를 공유합니다. 코데즈컴바인 'AIR WIND' 여름 라인, 에버콜라겐 썸머 프로모션, 라코스테 테니스 코트 그래픽 등 AI를 활용한 비주얼과 무빙 제안을 확인하세요.</p>
+    <span class="featured-badge badge-post-production">포스트 프로덕션</span>
+    <h2 class="featured-title">AI 활용 시즌 무드 비주얼 제안 사례</h2>
+    <p class="featured-desc">제품 컨셉과 시즌 무드를 반영한 비주얼 제안 — 코데즈컴바인 'AIR WIND' 여름 라인, 에버콜라겐 썸머 프로모션, 라코스테 테니스 코트 그래픽 & 무빙. 모든 제작물은 AI를 활용하여 진행.</p>
     <div class="featured-meta">
       <span>최현정 · 영상아트팀</span>
-      <span>5월 22일 (목)</span>
+      <span class="meta-dot"></span>
+      <span>5월 22일</span>
+      <span class="meta-dot"></span>
+      <span>84명 확인</span>
     </div>
   </a>
-
-  <p class="section-label">Latest</p>
+  <p class="section-label">This Week</p>
   <div class="card-grid">
-
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-announce">공지사항</span>
-      <h3 class="card-title">G스튜디오 주간 리뷰 — 5월 3주차</h3>
-      <p class="card-desc">영상제작부문 주간 업무 보고를 시각화한 주간 리뷰입니다. 5월 11일~17일 주요 업무를 확인하세요.</p>
-      <div class="card-highlights">
-        <span class="card-highlight">정기점검 2건</span>
-        <span class="card-highlight">AI 음원 힛딜 팝업</span>
-        <span class="card-highlight">KOBA 리뷰</span>
+      <span class="card-badge badge-announcement-light">공지사항</span>
+      <h3 class="card-title">G스튜디오 주간리뷰 — 5월 3주차</h3>
+      <p class="card-desc">영상제작부문 주간 업무 보고를 시각화한 주간 리뷰 (5/11~5/17). 정기점검 2건, AI 음원 핫딜 팝업 제작, KOBA 전시회 리뷰 등 주요 활동 공유.</p>
+      <div class="card-tags">
+        <span class="card-tag">#주간리뷰</span>
+        <span class="card-tag">#정기점검</span>
+        <span class="card-tag">#KOBA</span>
       </div>
       <div class="card-meta">
-        <span class="card-author">김민국 · 영상제작2팀</span>
-        <span>5월 21일 (수)</span>
+        <span>김민국 · 영상제작2팀</span>
+        <span class="meta-dot"></span>
+        <span>5월 21일</span>
+        <span class="meta-dot"></span>
+        <span>221명 확인</span>
       </div>
     </a>
-
   </div>
-
 </main>
-
 <footer class="footer">
-  <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="footer-logo" target="_blank">
-    <span class="footer-logo-icon">G</span>
-    G Studio
-  </a>
-  <p class="footer-copy">&copy; 2026 GS Retail · 영상제작부문</p>
+  <p>G Studio Daily News &middot; GS리테일 홈쇼핑BU 영상제작부문<br>
+  <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all">G Studio 커뮤니티 바로가기</a></p>
 </footer>
-
 </body>
 </html>
