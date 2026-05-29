@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G Studio Daily News â 2026.05.28</title>
+<title>G Studio Daily News — 2026.05.29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
-
   :root {
     --apple-bg: #FFFFFF;
     --apple-surface: #F5F5F7;
@@ -20,17 +20,14 @@
     --hero-text: #F5F5F7;
     --featured-bg: #1D1D1F;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
     font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--apple-surface);
     color: var(--apple-text-primary);
     -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
+    line-height: 1.6;
   }
-
   .hero {
     background: var(--hero-bg);
     color: var(--hero-text);
@@ -39,337 +36,167 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero::before {
     content: '';
     position: absolute;
-    top: -60%;
-    left: -20%;
-    width: 140%;
-    height: 200%;
-    background: radial-gradient(ellipse at center, rgba(0,113,227,0.08) 0%, transparent 70%);
+    top: -60%; left: -20%;
+    width: 140%; height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(0,113,227,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(168,85,247,0.08) 0%, transparent 60%);
     pointer-events: none;
   }
-
   .hero-logo {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 64px;
-    background: linear-gradient(135deg, #0071E3, #40A9FF);
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, #0071E3, #5E5CE6);
     border-radius: 16px;
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: 900;
-    color: #fff;
-    letter-spacing: -1px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 22px; font-weight: 800; color: #fff;
     letter-spacing: -0.5px;
-    margin-bottom: 8px;
     position: relative;
-    z-index: 1;
   }
-
-  .hero-date {
-    font-size: 17px;
-    font-weight: 500;
-    color: rgba(245,245,247,0.6);
-    margin-bottom: 6px;
-    position: relative;
-    z-index: 1;
+  .hero h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 8px; position: relative; }
+  .hero .subtitle { font-size: 17px; color: rgba(245,245,247,0.6); font-weight: 400; position: relative; }
+  .hero .date-range {
+    display: inline-block; margin-top: 16px; padding: 6px 16px;
+    background: rgba(255,255,255,0.08); border-radius: 20px;
+    font-size: 13px; color: rgba(245,245,247,0.7); font-weight: 500;
+    letter-spacing: 0.5px; position: relative;
   }
-
-  .hero-sub {
-    font-size: 15px;
-    font-weight: 400;
-    color: rgba(245,245,247,0.45);
-    position: relative;
-    z-index: 1;
-  }
-
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 24px 16px 48px;
-  }
-
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px 40px; }
   .section-label {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--apple-text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
-    padding-left: 4px;
+    font-size: 12px; font-weight: 700; color: var(--apple-text-secondary);
+    text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 12px; padding-left: 4px;
   }
-
-  /* Featured Card */
-  .featured {
-    background: var(--featured-bg);
-    border-radius: var(--apple-radius);
-    padding: 32px 28px;
-    margin-bottom: 24px;
-    text-decoration: none;
-    display: block;
-    color: var(--hero-text);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-    overflow: hidden;
+  .featured-card {
+    display: block; background: var(--featured-bg); color: var(--hero-text);
+    border-radius: var(--apple-radius); padding: 32px 28px; margin-bottom: 28px;
+    text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative; overflow: hidden;
   }
-
-  .featured::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle at top right, rgba(0,113,227,0.15), transparent 70%);
+  .featured-card::after {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,113,227,0.15) 0%, transparent 70%);
     pointer-events: none;
   }
-
-  .featured:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  .featured-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+  .featured-card .card-badge {
+    display: inline-block; padding: 4px 10px; border-radius: 6px;
+    font-size: 11px; font-weight: 700; margin-bottom: 14px;
+    letter-spacing: 0.3px; position: relative;
   }
-
-  .featured .card-badge {
-    background: rgba(0,113,227,0.2);
-    color: #40A9FF;
-    border: 1px solid rgba(0,113,227,0.3);
+  .featured-card .card-title {
+    font-size: 22px; font-weight: 700; line-height: 1.35;
+    margin-bottom: 10px; letter-spacing: -0.3px; position: relative;
   }
-
-  .featured .card-title {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 14px 0 10px;
-    position: relative;
-    z-index: 1;
+  .featured-card .card-desc {
+    font-size: 15px; color: rgba(245,245,247,0.65); line-height: 1.6;
+    margin-bottom: 18px; position: relative;
   }
-
-  .featured .card-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    color: rgba(245,245,247,0.65);
-    position: relative;
-    z-index: 1;
+  .featured-card .card-meta {
+    display: flex; gap: 12px; font-size: 13px;
+    color: rgba(245,245,247,0.45); position: relative;
   }
-
-  .featured .card-meta {
-    margin-top: 18px;
-    color: rgba(245,245,247,0.4);
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Card Grid */
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-
+  .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
   .card {
-    background: var(--apple-bg);
-    border-radius: var(--apple-radius);
-    padding: 22px 20px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    color: var(--apple-text-primary);
+    display: block; background: var(--apple-bg); border-radius: var(--apple-radius);
+    padding: 22px 20px; text-decoration: none; color: var(--apple-text-primary);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid rgba(0,0,0,0.04);
-    box-shadow: var(--apple-shadow);
+    border: 1px solid rgba(0,0,0,0.04); box-shadow: var(--apple-shadow);
   }
-
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+  .card .card-badge {
+    display: inline-block; padding: 3px 8px; border-radius: 5px;
+    font-size: 10px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.3px;
   }
-
-  .card-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    width: fit-content;
-    background: rgba(0,113,227,0.08);
-    color: var(--apple-blue);
-    border: 1px solid rgba(0,113,227,0.15);
+  .card .card-title {
+    font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 8px;
+    letter-spacing: -0.2px; display: -webkit-box; -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; overflow: hidden;
   }
-
-  .badge-filming { background: rgba(255,107,53,0.1); color: #E85D26; border-color: rgba(255,107,53,0.2); }
-  .badge-post { background: rgba(123,97,255,0.1); color: #6B4FE0; border-color: rgba(123,97,255,0.2); }
-  .badge-tech { background: rgba(0,180,216,0.1); color: #0099B8; border-color: rgba(0,180,216,0.2); }
-  .badge-edu { background: rgba(46,204,113,0.1); color: #25A55A; border-color: rgba(46,204,113,0.2); }
-  .badge-notice { background: rgba(231,76,60,0.1); color: #D63031; border-color: rgba(231,76,60,0.2); }
-  .badge-news { background: rgba(110,110,115,0.1); color: #6E6E73; border-color: rgba(110,110,115,0.2); }
-
-  .card-title {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.4;
-    margin: 10px 0 8px;
-    letter-spacing: -0.2px;
+  .card .card-desc {
+    font-size: 13px; color: var(--apple-text-secondary); line-height: 1.55;
+    margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; overflow: hidden;
   }
-
-  .card-desc {
-    font-size: 13px;
-    line-height: 1.55;
-    color: var(--apple-text-secondary);
-    flex: 1;
-  }
-
-  .card-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 14px;
-    font-size: 12px;
-    color: var(--apple-text-secondary);
-  }
-
-  .card-author {
-    font-weight: 500;
-  }
-
-  .card-date {
-    opacity: 0.7;
-  }
-
-  /* Full-width card */
-  .card-full {
-    grid-column: 1 / -1;
-  }
-
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 32px 16px 40px;
-    border-top: 1px solid var(--apple-border);
-    margin-top: 8px;
-  }
-
-  .footer p {
-    font-size: 12px;
-    color: var(--apple-text-secondary);
-    line-height: 1.6;
-  }
-
-  .footer a {
-    color: var(--apple-blue);
-    text-decoration: none;
-    font-weight: 500;
-  }
-
+  .card .card-meta { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--apple-text-secondary); }
+  .card .card-author { font-weight: 600; color: var(--apple-text-primary); opacity: 0.7; }
+  .badge-announce { background: rgba(231,76,60,0.12); color: #E74C3C; }
+  .badge-tech { background: rgba(0,180,216,0.12); color: #00B4D8; }
+  .badge-post { background: rgba(123,97,255,0.12); color: #7B61FF; }
+  .badge-trend { background: rgba(255,107,53,0.12); color: #FF6B35; }
+  .badge-announce-dark { background: rgba(231,76,60,0.2); color: #FF6B6B; }
+  .badge-tech-dark { background: rgba(0,180,216,0.2); color: #48CAE4; }
+  .footer { text-align: center; padding: 24px 16px 32px; font-size: 12px; color: var(--apple-text-secondary); }
+  .footer a { color: var(--apple-blue); text-decoration: none; font-weight: 500; }
   .footer a:hover { text-decoration: underline; }
-
-  .views-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    font-size: 11px;
-    color: var(--apple-text-secondary);
-    opacity: 0.6;
-  }
-
-  .views-badge svg {
-    width: 12px;
-    height: 12px;
-  }
-
-  /* Responsive */
+  .divider { width: 40px; height: 3px; background: var(--apple-border); border-radius: 2px; margin: 0 auto 20px; }
   @media (max-width: 600px) {
     .hero { padding: 40px 20px 36px; }
     .hero h1 { font-size: 26px; }
-    .container { padding: 16px 12px 36px; }
+    .container { padding: 20px 12px 32px; }
     .card-grid { grid-template-columns: 1fr; }
-    .featured { padding: 24px 20px; }
-    .featured .card-title { font-size: 19px; }
+    .featured-card { padding: 24px 20px; }
+    .featured-card .card-title { font-size: 19px; }
   }
 </style>
 </head>
 <body>
-
-<!-- Hero Section -->
-<div class="hero">
+<header class="hero">
   <div class="hero-logo">G</div>
   <h1>G Studio Daily News</h1>
-  <div class="hero-date">2026.05.28 Wednesday</div>
-  <div class="hero-sub">5.21 â 5.28 ì£¼ì ìì</div>
-</div>
-
-<!-- Content -->
-<div class="container">
-
-  <!-- Featured Card -->
-  <div class="section-label">Featured</div>
-  <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="featured" target="_blank">
-    <span class="card-badge badge-notice">ê³µì§ì¬í­</span>
-    <h3 class="card-title">Gì¤íëì¤ ì£¼ê°ë¦¬ë·° â 5ì 4ì£¼ì°¨</h3>
-    <p class="card-desc">ììì ìë¶ë¬¸ ì£¼ê° ìë¬´ ë³´ê³ ë¥¼ ìê°íí ì£¼ê° ë¦¬ë·° ê³µì . ìì¦ ë¬´ë AI ë¹ì£¼ì¼ ì ì(ìµíì ), ì·¨í¥ìì  ë¦¬ë´ì´(ë¬¸ìë¦° ì¸) ë± ì´ë² ì£¼ ì£¼ì ì±ê³¼ë¥¼ íëì íì¸íì¸ì.</p>
+  <p class="subtitle">영상제작부문 주요 소식</p>
+  <span class="date-range">5.22 — 5.29 주요 소식</span>
+</header>
+<main class="container">
+  <p class="section-label">Featured</p>
+  <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="featured-card" target="_blank">
+    <div class="card-badge badge-announce-dark">주간리뷰</div>
+    <h3 class="card-title">영상아트팀 주간리뷰 — 5월 4주차</h3>
+    <p class="card-desc">시즌 무드 AI 비주얼 제안(최현정), 취향상점 리뉴얼(문예린 외) 등 영상아트팀의 5/18~5/24 주간 업무 성과를 공유합니다.</p>
     <div class="card-meta">
-      <span class="card-author">ë¸ë¯¼ì§ Â· ìììí¸í</span>
-      <span class="card-date">5ì 27ì¼</span>
+      <span>노민지 · 영상아트팀</span>
+      <span>5월 28일 수요일</span>
     </div>
   </a>
-
-  <!-- Card Grid -->
-  <div class="section-label">This Week</div>
+  <p class="section-label">This Week</p>
   <div class="card-grid">
-
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-tech">ì¥ë¹ & ê¸°ì </span>
-      <h3 class="card-title">KOBA 2026 ì ê¸°ì  ë¦¬í¬í¸</h3>
-      <p class="card-desc">í¸ë ëì¤ì¸ ê¸°ìCì KOBA íì¥ ì·¨ì¬. ë°©ì¡Â·ìì ë¶ì¼ ìµì  ì¥ë¹ì ê¸°ì  í¸ë ëë¥¼ ììì¼ë¡ ìê°í©ëë¤.</p>
+      <div class="card-badge badge-trend">장비 & 기술</div>
+      <h3 class="card-title">KOBA 2026 신기술 · 신장비 리뷰</h3>
+      <p class="card-desc">돌아온 기자 C가 전하는 KOBA 현장! 삼화 DEEPEYE 자동화 촬영 시스템 등 최신 방송 장비를 살펴봅니다.</p>
       <div class="card-meta">
-        <span class="card-author">í¸ë ëì¤ì¸ Â· ììì ì1í</span>
-        <span class="card-date">5ì 27ì¼</span>
+        <span class="card-author">트렌드줍인 · 영상제작1팀</span>
+        <span>5월 27일 화요일</span>
       </div>
     </a>
-
     <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank">
-      <span class="card-badge badge-tech">ì¥ë¹ & ê¸°ì </span>
-      <h3 class="card-title">5ì ë¶ì¡°ì ì¤ AVì±í¬ ì ê² ìë£</h3>
-      <p class="card-desc">A, B, C, T ë¶ì¡°ì ì¤ AVì±í¬ ì ê² ê²°ê³¼ ëª¨ë ì´ììì. ì´ëíÂ·ìµì±ë ¬ ë§¤ëì ì í¨ê» ì§í.</p>
+      <div class="card-badge badge-tech">장비 & 기술</div>
+      <h3 class="card-title">5월 부조정실 AV싱크 점검 현황</h3>
+      <p class="card-desc">A, B, C, T 부조정실 AV싱크 점검 결과 모두 이상없음. 이동하·최성렬 매니저와 함께 진행.</p>
       <div class="card-meta">
-        <span class="card-author">ìì¤êµ Â· ììì ì2í</span>
-        <span class="card-date">5ì 26ì¼</span>
+        <span class="card-author">서준교 · 영상제작2팀</span>
+        <span>5월 26일 월요일</span>
       </div>
     </a>
-
-    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card card-full" target="_blank">
-      <span class="card-badge badge-post">í¬ì¤í¸ íë¡ëì</span>
-      <h3 class="card-title">AI íì© ìì¦ ë¬´ë ë¹ì£¼ì¼ ì ì ì¬ë¡</h3>
-      <p class="card-desc">ì í ì»¨ìê³¼ ìì¦ ë¬´ëë¥¼ ë°ìí AI ë¹ì£¼ì¼ ì ì ì¬ë¡ ê³µì . ì½ë°ì¦ì»´ë°ì¸ 'AIR WIND' ì¬ë¦ ë¼ì¸, ìë²ì½ë¼ê² ì¬ó¸¸ íë¡ëª¨ì, ë¼ì½ì¤í íëì¤ ì½í¸ ê·¸ëí½ ë± ëª¨ë  ì ìë¬¼ì AIë¡ ì ì.</p>
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank" style="grid-column: 1 / -1;">
+      <div class="card-badge badge-post">포스트 프로덕션</div>
+      <h3 class="card-title">AI 활용 시즌 무드 비주얼 제안 — 코데즈컴바인 · 에버콜라겠 · 라코스테</h3>
+      <p class="card-desc">제품 컨셉과 시즌 무드를 반영한 AI 비주얼 제안 사례. 코데즈컴바인 'AIR WIND' 여름 라인, 에버콜라겠 썸머 프로모션, 라코스테 테니스 코트 그래픽 등.</p>
       <div class="card-meta">
-        <span class="card-author">ìµíì  Â· ìììí¸í</span>
-        <span class="card-date">5ì 21ì¼</span>
+        <span class="card-author">최현정 · 영상아트팀</span>
+        <span>5월 21일</span>
       </div>
     </a>
-
   </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <p>
-      G Studio Daily News &middot; GS Retail íì¼íBU ììì ìë¶ë¬¸<br>
-      <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank">Gì¤íëì¤ ë°ë¡ê°ê¸° &rarr;</a>
-    </p>
-  </div>
-
-</div>
-
+</main>
+<footer class="footer">
+  <div class="divider"></div>
+  <p style="margin-bottom: 6px;">
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank">G Studio 바로가기</a>
+  </p>
+  <p>&copy; 2026 G Studio · GS Retail 영상제작부문</p>
+</footer>
 </body>
 </html>
