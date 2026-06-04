@@ -3,50 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G Studio Daily News — 2026.06.03</title>
+<title>G Studio Daily News — 2026.06.04</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-  :root { --apple-bg: #FFFFFF;--apple-surface: #F5F5F7;--apple-text-primary: #1D1D1F;--apple-text-secondary: #6E6E73;--apple-blue: #0071E3;--apple-border: #D2D2D7;--apple-radius: 18px;--apple-shadow: 0 2px 12px rgba(0,0,0,0.08);--hero-bg: #1D1D1F;--hero-text: #F5F5F7;--featured-bg: #1D1D1F; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, 'Inter', BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--apple-surface); color: var(--apple-text-primary); -webkit-font-smoothing: antialiased; }
-  .hero { background: var(--hero-bg); color: var(--hero-text); padding: 60px 20px 50px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 50%, rgba(0,113,227,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(94,92,230,0.06) 0%, transparent 60%); animation: heroGlow 8s ease-in-out infinite alternate; }
-  @keyframes heroGlow { 0% { transform: translate(0, 0); } 100% { transform: translate(-5%, 3%); } }
-  .hero-content { position: relative; z-index: 1; }
-  .hero-logo { width: 56px; height: 56px; background: linear-gradient(135deg, #0071E3, #5E5CE6); border-radius: 14px; display: inline-flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 20px; }
-  .hero h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 8px; background: linear-gradient(135deg, #F5F5F7, #A1A1A6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .hero-date { font-size: 20px; font-weight: 500; color: #A1A1A6; margin-bottom: 6px; }
-  .hero-period { font-size: 15px; color: #6E6E73; }
-  .featured { margin: -30px auto 32px; max-width: 940px; padding: 0 20px; position: relative; z-index: 2; }
-  .featured-card { background: var(--featured-bg); border-radius: 20px; padding: 40px 36px; color: var(--hero-text); text-decoration: none; display: block; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 8px 30px rgba(0,0,0,0.2); position: relative; overflow: hidden; }
-  .featured-card::after { content: ''; position: absolute; top: 0; right: 0; width: 40%; height: 100%; background: linear-gradient(135deg, transparent 0%, rgba(0,113,227,0.06) 100%); pointer-events: none; }
-  .featured-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
-  .featured-badge { display: inline-block; padding: 5px 14px; border-radius: 100px; font-size: 12px; font-weight: 600; margin-bottom: 16px; background: rgba(0,180,216,0.15); color: #00B4D8; }
-  .featured-title { font-size: 28px; font-weight: 700; margin-bottom: 12px; line-height: 1.3; }
-  .featured-desc { font-size: 16px; color: #A1A1A6; line-height: 1.6; margin-bottom: 20px; max-width: 600px; }
-  .featured-meta { display: flex; align-items: center; gap: 16px; font-size: 14px; color: #6E6E73; }
-  .featured-author { font-weight: 500; color: #A1A1A6; }
-  .card-grid { max-width: 940px; margin: 0 auto 48px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-  .card { background: var(--apple-bg); border-radius: var(--apple-radius); padding: 28px 24px; text-decoration: none; color: var(--apple-text-primary); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: var(--apple-shadow); border: 1px solid rgba(0,0,0,0.04); }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
-  .card-badge { display: inline-block; padding: 4px 12px; border-radius: 100px; font-size: 11px; font-weight: 600; margin-bottom: 14px; align-self: flex-start; }
-  .badge-education { background: rgba(46,204,113,0.1); color: #2ECC71; }
-  .badge-announcement { background: rgba(0,113,227,0.1); color: #0071E3; }
-  .badge-tech { background: rgba(0,180,216,0.1); color: #00B4D8; }
-  .card-title { font-size: 18px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
-  .card-desc { font-size: 14px; color: var(--apple-text-secondary); line-height: 1.6; margin-bottom: 18px; flex-grow: 1; }
-  .card-meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--apple-text-secondary); padding-top: 14px; border-top: 1px solid var(--apple-border); }
-  .card-author { font-weight: 500; }
-  .footer { text-align: center; padding: 32px 20px 48px; color: var(--apple-text-secondary); font-size: 13px; }
-  .footer a { color: var(--apple-blue); text-decoration: none; font-weight: 500; }
-  .footer-divider { width: 40px; height: 1px; background: var(--apple-border); margin: 0 auto 16px; }
-  @media (max-width: 600px) { .hero { padding: 48px 16px 40px; } .hero h1 { font-size: 28px; } .featured-card { padding: 28px 22px; } .featured-title { font-size: 22px; } .card-grid { grid-template-columns: 1fr; } }
+:root{--apple-bg:#FFF;--apple-surface:#F5F5F7;--apple-text-primary:#1D1D1F;--apple-text-secondary:#6E6E73;--apple-blue:#0071E3;--apple-radius:18px;--apple-shadow:0 2px 12px rgba(0,0,0,.08);--hero-bg:#1D1D1F;--hero-text:#F5F5F7;--featured-bg:#1D1D1F}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;background:var(--apple-surface);color:var(--apple-text-primary);-webkit-font-smoothing:antialiased}
+.hero{background:var(--hero-bg);color:var(--hero-text);padding:48px 24px 40px;text-align:center}
+.hero-logo{width:56px;height:56px;background:linear-gradient(135deg,#0071E3,#00C7FF);border-radius:14px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:#fff;margin-bottom:16px}
+.hero h1{font-size:32px;font-weight:700;letter-spacing:-.5px;margin-bottom:6px}
+.hero .subtitle{font-size:17px;color:#86868B;font-weight:400}
+.hero .date-range{display:inline-block;margin-top:12px;padding:6px 16px;border:1px solid rgba(255,255,255,.15);border-radius:20px;font-size:13px;color:#A1A1A6}
+.container{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+.featured{background:var(--featured-bg);border-radius:var(--apple-radius);padding:32px 28px;margin-bottom:16px;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.featured:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+.featured::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#0071E3,#00C7FF)}
+.featured .card-badge{display:inline-block;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;margin-bottom:14px}
+.featured .card-title{font-size:22px;font-weight:700;color:#F5F5F7;line-height:1.35;margin-bottom:10px}
+.featured .card-desc{font-size:15px;color:#A1A1A6;line-height:1.55;margin-bottom:18px}
+.featured .card-meta{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#86868B}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--apple-bg);border-radius:var(--apple-radius);padding:24px 22px;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s;box-shadow:var(--apple-shadow)}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.12)}
+.card .card-badge{display:inline-block;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600;margin-bottom:12px}
+.card .card-title{font-size:17px;font-weight:700;color:var(--apple-text-primary);line-height:1.35;margin-bottom:8px}
+.card .card-desc{font-size:14px;color:var(--apple-text-secondary);line-height:1.5;margin-bottom:16px}
+.card .card-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#86868B}
+.badge-tech{background:rgba(0,180,216,.12);color:#00B4D8}
+.badge-announce{background:rgba(231,76,60,.12);color:#E74C3C}
+.footer{text-align:center;padding:32px 16px;font-size:12px;color:#86868B}
+.footer a{color:var(--apple-blue);text-decoration:none}
+.footer a:hover{text-decoration:underline}
+@media(max-width:600px){.hero h1{font-size:26px}.card-grid{grid-template-columns:1fr}.featured .card-title{font-size:20px}.container{padding:16px 12px 40px}}
 </style>
 </head>
 <body>
-<section class="hero"><div class="hero-content"><div class="hero-logo">G</div><h1>G Studio Daily News</h1><div class="hero-date">2026. 06. 03</div><div class="hero-period">5.27 — 6.3 주요 소식</div></div></section>
-<section class="featured"><a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="featured-card" target="_blank"><div class="featured-badge">장비 & 기술</div><h2 class="featured-title">5월 케이블 / TV집기 점검 결과 공유</h2><p class="featured-desc">2026년 5월 스튜디오 케이블 및 박스TV/멀티뷰어 모니터 정기 점검 완료. 전 항목 이상 없음 확인.</p><div class="featured-meta"><span class="featured-author">김성일 · 영상제작2팀</span><span>6월 1일</span></div></a></section>
-<section class="card-grid"><a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank"><div class="card-badge badge-education">교육 & 성장</div><h3 class="card-title">인터뷰G — AI 에이전트 개발자 임은택 매니저</h3><p class="card-desc">AI 콘텐츠 제작의 새로운 바람을 불러온 영상아트팀 임은택 매니저 인터뷰. G요미 리포터와 함께하는 AI 에이전트 개발 이야기 1화.</p><div class="card-meta"><span class="card-author">김세영 · 영상제작1팀</span><span>5월 30일</span></div></a><a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank"><div class="card-badge badge-announcement">주간 리뷰</div><h3 class="card-title">G스튜디오 주간 리뷰 — 5월 4주차</h3><p class="card-desc">5월 18일~24일 주간 업무 리뷰. 시즌 무드 AI 비주얼 제안(최현정), 취향상점 리뉴얼(문예린 외) 등 영상아트팀 주요 성과 공유.</p><div class="card-meta"><span class="card-author">노민지 · 영상아트팀</span><span>5월 27일</span></div></a><a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" class="card" target="_blank"><div class="card-badge badge-tech">장비 & 기술</div><h3 class="card-title">KOBA 2026 신기술 & 신장비 리포트</h3><p class="card-desc">트렌드줍인 기자C가 전하는 KOBA 2026 현장. 방송 분야의 다양한 신기술과 신장비를 한눈에 살펴보세요.</p><div class="card-meta"><span class="card-author">트렌드줍인 · 영상제작1팀</span><span>5월 26일</span></div></a></section>
-<footer class="footer"><div class="footer-divider"></div><p>G Studio Daily News — GS Retail 영상제작부문</p><p style="margin-top:6px;"><a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank">G Studio 바로가기</a></p></footer>
+<section class="hero">
+  <div class="hero-logo">G</div>
+  <h1>G Studio Daily News</h1>
+  <p class="subtitle">영상제작부문 주요 소식</p>
+  <span class="date-range">5.28 — 6.04 주요 소식</span>
+</section>
+<div class="container">
+  <a href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg3NjUwMjE3NTIwMzMyOCJ9" class="featured" target="_blank">
+    <span class="card-badge" style="background:rgba(46,204,113,.2);color:#5DE8A0;">교육 &amp; 성장</span>
+    <h3 class="card-title">인터뷰G — AI 에이전트 임은택 매니저</h3>
+    <p class="card-desc">AI 에이전트 개발로 콘텐츠 제작에 새 바람을 불러온 영상아트팀 임은택 매니저 인터뷰. G요미 리포터가 출동해 개발 배경과 활용법을 전합니다.</p>
+    <div class="card-meta"><span>김세영 · 영상제작1팀</span><span>5월 30일</span></div>
+  </a>
+  <div class="card-grid">
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg3OTA2MDUzOTEyOTg1NiJ9" class="card" target="_blank">
+      <span class="card-badge badge-tech">장비 &amp; 기술</span>
+      <h3 class="card-title">5월 케이블·TV집기 점검 완료</h3>
+      <p class="card-desc">스튜디오 케이블 및 박스TV·멀티뷰어 모니터 점검 결과, 이상 없음.</p>
+      <div class="card-meta"><span>김성일 · 영상제작2팀</span><span>6월 1일</span></div>
+    </a>
+    <a href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg3MzY4NDM2MzE1NzUwNCJ9" class="card" target="_blank">
+      <span class="card-badge badge-announce">공지사항</span>
+      <h3 class="card-title">G스튜디오 주간 리뷰 — 5월 4주차</h3>
+      <p class="card-desc">시즌 무드 AI 비주얼 제안, 취향상점 리뉴얼 등 5/18~5/24 주간 업무 요약.</p>
+      <div class="card-meta"><span>노민지 · 영상아트팀</span><span>5월 27일</span></div>
+    </a>
+  </div>
+</div>
+<div class="footer">
+  <p>&copy; 2026 G Studio · GS Retail 영상제작부문</p>
+  <p style="margin-top:6px;"><a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all">G Studio 커뮤니티 바로가기 →</a></p>
+</div>
 </body>
 </html>
