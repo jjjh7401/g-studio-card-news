@@ -3,162 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G Studio Daily News — 2026.06.05</title>
+<title>G Studio Daily News — 2026.06.07</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
 <style>
-  :root{
-    --apple-bg:#FFFFFF;
-    --apple-surface:#F5F5F7;
-    --apple-text-primary:#1D1D1F;
-    --apple-text-secondary:#6E6E73;
-    --apple-blue:#0071E3;
-    --apple-border:#D2D2D7;
-    --apple-radius:18px;
-    --apple-shadow:0 2px 12px rgba(0,0,0,0.08);
-    --hero-bg:#1D1D1F;
-    --hero-text:#F5F5F7;
-    --featured-bg:#1D1D1F;
+  :root {
+    --apple-bg: #FFFFFF;
+    --apple-surface: #F5F5F7;
+    --apple-text-primary: #1D1D1F;
+    --apple-text-secondary: #6E6E73;
+    --apple-blue: #0071E3;
+    --apple-border: #D2D2D7;
+    --apple-radius: 18px;
+    --apple-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --hero-bg: #1D1D1F;
+    --hero-text: #F5F5F7;
+    --featured-bg: #1D1D1F;
   }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
-    background:var(--apple-surface);
-    color:var(--apple-text-primary);
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--apple-surface);
+    color: var(--apple-text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
   }
-  .wrap{max-width:1120px;margin:0 auto;padding:0 22px 60px;}
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px 60px; }
 
-  /* Hero */
-  .hero{
-    background:var(--hero-bg);
-    color:var(--hero-text);
-    border-radius:0 0 32px 32px;
-    padding:64px 40px 56px;
-    text-align:center;
-    margin-bottom:40px;
+  /* HERO */
+  .hero {
+    background: var(--hero-bg);
+    color: var(--hero-text);
+    border-radius: 0 0 32px 32px;
+    padding: 64px 48px 56px;
+    margin: 0 auto;
+    max-width: 1080px;
+    text-align: center;
   }
-  .hero-logo{
-    display:inline-flex;align-items:center;gap:10px;
-    font-size:15px;font-weight:600;letter-spacing:.18em;
-    color:#86868B;text-transform:uppercase;margin-bottom:22px;
+  .hero-logo {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-weight: 800; letter-spacing: 4px; font-size: 15px;
+    color: #fff; margin-bottom: 28px;
+    border: 1px solid rgba(255,255,255,0.22);
+    padding: 8px 18px; border-radius: 100px;
   }
-  .hero-logo .g{
-    width:34px;height:34px;border-radius:9px;background:#fff;color:#1D1D1F;
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;letter-spacing:0;
+  .hero-logo .g {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: var(--apple-blue); color:#fff; font-size: 16px;
+    display:flex; align-items:center; justify-content:center; font-weight:900;
+    letter-spacing: 0;
   }
-  .hero h1{font-size:46px;font-weight:700;letter-spacing:-.02em;margin-bottom:14px;}
-  .hero .date{font-size:21px;font-weight:600;color:#f5f5f7;margin-bottom:6px;}
-  .hero .period{font-size:16px;color:#86868B;}
+  .hero h1 {
+    font-size: 46px; font-weight: 800; letter-spacing: -1.2px;
+    line-height: 1.1; margin-bottom: 16px;
+  }
+  .hero .date { font-size: 19px; color: #a1a1a6; font-weight: 500; }
+  .hero .sub {
+    margin-top: 22px; font-size: 16px; color: #d2d2d7;
+    display:inline-block; padding: 9px 20px;
+    background: rgba(255,255,255,0.08); border-radius: 100px;
+  }
 
-  /* Section label */
-  .section-label{
-    font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--apple-text-secondary);margin:0 4px 16px;
+  /* SECTION LABEL */
+  .section-label {
+    font-size: 13px; font-weight: 700; letter-spacing: 1.5px;
+    color: var(--apple-text-secondary); text-transform: uppercase;
+    margin: 48px 4px 18px;
   }
 
-  /* Featured */
-  .featured{
-    display:block;text-decoration:none;color:var(--hero-text);
-    background:var(--featured-bg);
-    border-radius:var(--apple-radius);
-    padding:44px 44px 40px;
-    box-shadow:var(--apple-shadow);
-    margin-bottom:44px;
-    transition:transform .25s ease, box-shadow .25s ease;
+  /* FEATURED */
+  .featured {
+    display: block; text-decoration: none;
+    background: var(--featured-bg); color: var(--hero-text);
+    border-radius: 24px; padding: 44px 44px 40px;
+    box-shadow: var(--apple-shadow);
+    transition: transform .25s ease, box-shadow .25s ease;
+    position: relative; overflow: hidden;
   }
-  .featured:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.18);}
-  .badge{
-    display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;
-    color:#fff;padding:6px 14px;border-radius:999px;margin-bottom:18px;
+  .featured:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.22); }
+  .featured .badge {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    letter-spacing: .5px; padding: 6px 14px; border-radius: 100px;
+    color: #fff; margin-bottom: 20px;
   }
-  .featured h2{font-size:32px;font-weight:700;letter-spacing:-.02em;line-height:1.25;margin-bottom:16px;}
-  .featured p{font-size:17px;color:#C7C7CC;max-width:780px;margin-bottom:26px;}
-  .featured .meta{font-size:14px;color:#86868B;display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
-  .featured .meta .author{color:#f5f5f7;font-weight:600;}
+  .featured h2 {
+    font-size: 32px; font-weight: 800; letter-spacing: -0.8px;
+    line-height: 1.18; margin-bottom: 14px; color:#fff;
+  }
+  .featured p { font-size: 17px; color: #c7c7cc; max-width: 760px; }
+  .featured .meta {
+    margin-top: 26px; display: flex; gap: 16px; align-items:center;
+    font-size: 14px; color: #a1a1a6;
+  }
+  .featured .meta .author { font-weight: 600; color:#e8e8ed; }
+  .featured .arrow {
+    position:absolute; right: 40px; bottom: 36px;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(255,255,255,0.12); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size: 20px;
+    transition: background .2s;
+  }
+  .featured:hover .arrow { background: var(--apple-blue); }
 
-  /* Grid */
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
-  .card{
-    display:flex;flex-direction:column;text-decoration:none;color:var(--apple-text-primary);
-    background:var(--apple-bg);
-    border:1px solid var(--apple-border);
-    border-radius:var(--apple-radius);
-    padding:28px 28px 24px;
-    box-shadow:var(--apple-shadow);
-    transition:transform .25s ease, box-shadow .25s ease;
-    min-height:200px;
+  /* GRID */
+  .grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
   }
-  .card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,0,0,0.12);}
-  .card h3{font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.3;margin-bottom:12px;}
-  .card p{font-size:15px;color:var(--apple-text-secondary);flex:1;margin-bottom:20px;}
-  .card .meta{font-size:13px;color:var(--apple-text-secondary);display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--apple-border);padding-top:14px;}
-  .card .meta .author{color:var(--apple-text-primary);font-weight:600;}
-
-  /* Footer */
-  .footer{
-    text-align:center;margin-top:54px;padding-top:30px;border-top:1px solid var(--apple-border);
-    color:var(--apple-text-secondary);font-size:13px;
+  .card {
+    display: flex; flex-direction: column; text-decoration: none;
+    background: var(--apple-bg); color: var(--apple-text-primary);
+    border: 1px solid var(--apple-border); border-radius: var(--apple-radius);
+    padding: 28px 28px 24px; box-shadow: var(--apple-shadow);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s;
+    min-height: 200px;
   }
-  .footer a{color:var(--apple-blue);text-decoration:none;}
-  .footer .brand{font-weight:700;color:var(--apple-text-primary);letter-spacing:.1em;}
+  .card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.12); border-color: #bcbcc4; }
+  .card-badge {
+    align-self: flex-start; font-size: 11.5px; font-weight: 700;
+    letter-spacing: .4px; color: #fff; padding: 5px 12px; border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  .card-title {
+    font-size: 21px; font-weight: 700; letter-spacing: -0.4px;
+    line-height: 1.3; margin-bottom: 10px;
+  }
+  .card-desc { font-size: 15px; color: var(--apple-text-secondary); flex-grow: 1; }
+  .card-meta {
+    margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--apple-surface);
+    display: flex; justify-content: space-between; align-items:center;
+    font-size: 13.5px;
+  }
+  .card-author { font-weight: 600; color: var(--apple-text-primary); }
+  .card-date { color: var(--apple-text-secondary); }
 
-  @media (max-width:680px){
-    .hero{padding:48px 24px 42px;border-radius:0 0 24px 24px;}
-    .hero h1{font-size:34px;}
-    .hero .date{font-size:18px;}
-    .featured{padding:32px 26px 30px;}
-    .featured h2{font-size:25px;}
-    .featured p{font-size:15px;}
-    .grid{grid-template-columns:1fr;}
+  /* FOOTER */
+  .footer {
+    margin-top: 56px; text-align: center;
+    color: var(--apple-text-secondary); font-size: 13px;
+  }
+  .footer a { color: var(--apple-blue); text-decoration: none; font-weight: 600; }
+  .footer .divider { width: 40px; height: 3px; background: var(--apple-border); border-radius: 4px; margin: 0 auto 24px; }
+
+  @media (max-width: 720px) {
+    .hero { padding: 48px 26px 44px; border-radius: 0 0 24px 24px; }
+    .hero h1 { font-size: 32px; }
+    .featured { padding: 32px 26px; }
+    .featured h2 { font-size: 25px; }
+    .featured .arrow { display:none; }
+    .grid { grid-template-columns: 1fr; }
+    .wrap { padding: 0 16px 48px; }
   }
 </style>
 </head>
 <body>
   <header class="hero">
-    <div class="hero-logo"><span class="g">G</span> G STUDIO</div>
-    <h1>Daily News</h1>
-    <div class="date">2026년 6월 5일 (금)</div>
-    <div class="period">5.29 — 6.4 주요 소식</div>
+    <div class="hero-logo"><span class="g">G</span> G STUDIO DAILY NEWS</div>
+    <h1>G 스튜디오 데일리 뉴스</h1>
+    <div class="date">2026년 6월 7일 · 일요일</div>
+    <div class="sub">5.31 — 6.7 영상제작부문 주요 소식</div>
   </header>
 
-  <div class="wrap">
-    <div class="section-label">Featured</div>
-    <a class="featured" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg4NTQ5NTkxMDg1MDU2MCJ9" target="_blank" rel="noopener">
-      <span class="badge" style="background:#FF6B35;">방송 모니터</span>
-      <h2>5월 GS SHOP·GSMYSHOP 주조 모니터 결과 공유</h2>
-      <p>영상제작2팀 주조정실에서 2026년 5월 GS SHOP, GSMYSHOP 방송을 모니터한 내용을 공유합니다. 개선이 필요한 항목은 팔로업이 요청되었습니다. (#SP #선제안 #주조모니터)</p>
-      <div class="meta"><span class="author">주조정실 · 영상제작2팀</span><span>2026.06.04</span><span>첨부 5건</span></div>
+  <main class="wrap">
+    <div class="section-label">Featured · 이번 주 핵심</div>
+    <a class="featured" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg4NTQxMTIyMDkzODc1MiJ9" target="_blank" rel="noopener">
+      <span class="badge" style="background:#E74C3C;">공지 · 주간 리뷰</span>
+      <h2>G스튜디오 주간 리뷰 — 5월 5주차</h2>
+      <p>영상제작부문의 한 주(5월 25일~31일) 업무 보고를 시각화한 "G스튜디오 주간 리뷰"를 공유드립니다. 정기집회·쇼티 R사이즈 영상·신규 LED월 소스 등 팀별 주요 성과를 한눈에 확인하세요.</p>
+      <div class="meta">
+        <span class="author">김세영 / 영상제작1팀</span>
+        <span>·</span>
+        <span>6월 4일</span>
+      </div>
+      <div class="arrow">→</div>
     </a>
 
-    <div class="section-label">More from G Studio</div>
+    <div class="section-label">More · 이번 주 소식</div>
     <div class="grid">
-      <a class="card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg4NTQxMTIyMDkzODc1MiJ9" target="_blank" rel="noopener">
-        <span class="badge" style="background:#E74C3C;">주간 리뷰</span>
-        <h3>G스튜디오 주간 리뷰 — 5월 5주차</h3>
-        <p>영상제작부문 한 주의 업무 보고를 한눈에 시각화했습니다. 5월 25일~31일 주요 활동을 정리한 주간 리뷰입니다.</p>
-        <div class="meta"><span class="author">김세영 · 영상제작1팀</span><span>2026.06.04</span></div>
+      <a class="card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg4NTQ5NTkxMDg1MDU2MCJ9" target="_blank" rel="noopener">
+        <span class="card-badge" style="background:#FF6B35;">방송 모니터 · SP</span>
+        <h3 class="card-title">5월 GSSHOP · GSMYSHOP 주조 모니터</h3>
+        <p class="card-desc">영상제작2팀 주조정실에서 5월 GSSHOP·GSMYSHOP 방송을 모니터링한 내용을 공유합니다. 개선이 필요한 사항은 FU 부탁드립니다.</p>
+        <div class="card-meta">
+          <span class="card-author">주조정실 / 영상제작2팀</span>
+          <span class="card-date">6월 4일</span>
+        </div>
       </a>
 
       <a class="card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg3OTA2MDUzOTEyOTg1NiJ9" target="_blank" rel="noopener">
-        <span class="badge" style="background:#00B4D8;">장비 &amp; 기술</span>
-        <h3>5월 케이블·TV집기 점검 결과</h3>
-        <p>스튜디오 케이블, 박스TV, 멀티뷰어 모니터를 점검한 결과 모두 이상 없음으로 확인됐습니다. 오준환·김만규 매니저와 함께 진행했습니다.</p>
-        <div class="meta"><span class="author">김성일 · 영상제작2팀</span><span>2026.05.31</span></div>
-      </a>
-
-      <a class="card" href="https://engage.cloud.microsoft/main/org/gsretail.com/threads/eyJfdHlwZSI6IlRocmVhZCIsImlkIjoiMzg3NjUwMjE3NTIwMzMyOCJ9" target="_blank" rel="noopener">
-        <span class="badge" style="background:#2ECC71;">인터뷰 · AI</span>
-        <h3>AI 에이전트 개발자 임은택 매니저 인터뷰</h3>
-        <p>AI 콘텐츠 제작의 새로운 바람을 불러온 영상아트팀 임은택 매니저 인터뷰 영상입니다. 마스코트 G요미 리포터가 함께했습니다. (1화 개발 배경)</p>
-        <div class="meta"><span class="author">김세영 · 영상제작1팀</span><span>2026.05.29</span></div>
+        <span class="card-badge" style="background:#00B4D8;">장비 &amp; 기술</span>
+        <h3 class="card-title">5월 케이블 · TV집기 점검 결과</h3>
+        <p class="card-desc">스튜디오 케이블/TV집기 점검을 완료했습니다. 케이블 이상 없음, 박스TV·멀티뷰어 모니터 이상 없음. 자세한 내용은 게시물 첨부파일을 확인하세요.</p>
+        <div class="card-meta">
+          <span class="card-author">김성일 / 영상제작2팀</span>
+          <span class="card-date">5월 31일</span>
+        </div>
       </a>
     </div>
 
-    <footer class="footer">
-      <p><span class="brand">G STUDIO</span> · 홈쇼핑BU 영상제작부문</p>
-      <p style="margin-top:6px;">자동 생성 데일리 뉴스 · <a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank" rel="noopener">G Studio 커뮤니티 바로가기</a></p>
-      <p style="margin-top:6px;">© 2026 GS Retail. G Studio Daily News.</p>
-    </footer>
-  </div>
+    <div class="footer">
+      <div class="divider"></div>
+      <p>본 카드뉴스는 Viva Engage <strong>G스튜디오</strong> 커뮤니티 게시물을 기반으로 자동 생성되었습니다.</p>
+      <p style="margin-top:8px;"><a href="https://engage.cloud.microsoft/main/org/gsretail.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIxNzYxODQ3NDU5ODQifQ/all" target="_blank" rel="noopener">G Studio 커뮤니티 바로가기 →</a></p>
+      <p style="margin-top:16px; color:#a1a1a6;">© 2026 G Studio · 홈쇼핑BU 영상제작부문</p>
+    </div>
+  </main>
 </body>
 </html>
